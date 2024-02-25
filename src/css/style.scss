@@ -1,9 +1,9 @@
 // Bootstrap
 @import "./grid.scss";
-@import "bootstrap/scss/bootstrap.scss";
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
 
 // Swiper
-@import "~swiper/swiper.scss";
+@import "./node_modules/swiper/swiper.scss";
 
 // Base
 @import './fonts.scss';

@@ -4,10 +4,9 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "parcel serve src/pages/*.pug",
-    "build": "parcel build src/*.pug --no-cache --no-content-hash --public-url ./",
+    "build": "parcel build src/pages/*.pug --no-cache --no-content-hash --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
