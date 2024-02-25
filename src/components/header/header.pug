@@ -1,0 +1,75 @@
+header.header
+    .header__bg
+    .header__line
+    .header__container.container
+        .header__row.row.no-gutters
+            
+            .header__content
+                .header__block
+                    .header__logo
+                        a.logo(href="/")
+                            .logo__text MainBit
+                    .header__nav
+                        nav.nav
+                            ul.nav__list
+                                li.nav__item 
+                                    a.nav__link.linkHead(href="/portfolio") Портфолио
+                                li.nav__item 
+                                    a.nav__link.linkHead(href="/reviews") ОТЗЫВЫ
+                                li.nav__item 
+                                    a.nav__link.linkHead(href="/blog") БЛОГ
+                                li.nav__item 
+                                    a.nav__link.linkHead(href="/contacts") КОНТАКТЫ
+                .header__block
+                    a.header__phone.linkHead(href="tel:+74959782708") +7 495 978-27-08
+                    a.header__feedback.linkHead(href="#0" data-feedback) оставить заявку
+                    .header__burger(data-menu)
+                        .header__burger-inner
+                            span
+                            span
+                            span
+                    .header__close(title="Закрыть" data-feedback)
+                        svg(viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M2 2L22 22")
+                            path(d="M22 2L2 22")
+                    .header__close-burger(title="Закрыть" data-menu)
+                        svg(viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M2 2L22 22")
+                            path(d="M22 2L2 22")
+    .header__menu 
+        .container
+            .header__menu-nav
+                nav.nav.--burger
+                    ul.nav__list
+                        li.nav__item 
+                            a.nav__link.linkHead(href="#0") Портфолио
+                        li.nav__item 
+                            a.nav__link.linkHead(href="#0") ОТЗЫВЫ
+                        li.nav__item 
+                            a.nav__link.linkHead(href="#0") БЛОГ
+                        li.nav__item 
+                            a.nav__link.linkHead(href="#0") КОНТАКТЫ
+    .header__request 
+        .container
+            .header__form.row.no-gutters
+                .header__form-content
+                    form.form
+                        .form__inner
+                            .form__container
+                                .form__head
+                                    .form__title.title.title--h2 Предварительная заявка
+                                    p.form__description.text.text--body Отправьте свои контакты, и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время
+                                .form__content
+                                    .form__label.text.text--body
+                                        input.form__input(type="text" name="name")
+                                        span.form__placeholder Ваше имя
+                                        span.form__error Некорректное имя
+                                    .form__label.text.text--body
+                                        input.form__input(type="text" name="phone")
+                                        span.form__placeholder Телефон
+                                        span.form__error Некорректный номер телефона
+                                    button.form__button.button.button--small(type="submit") Отправить
+                            .form__success 
+                                .form__title.title.title--h2 Заявка отправлена
+                                p.form__description.text.text--body Ваша заявка уже дошла до&nbsp;нас. В&nbsp;ближайшее время мы&nbsp;свяжемся с&nbsp;вами.
+                                button.form__button.button.button--small(data-feedback) Отлично!

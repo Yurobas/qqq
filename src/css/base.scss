@@ -1,0 +1,487 @@
+* {
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+  
+body {
+    position: relative;
+    margin: 0;
+    font-variant-numeric: lining-nums;
+    font-family: 'Navigo', Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: none;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+address {
+    margin: 0;
+    font-style: normal;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+img {
+    border: 0;
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+}
+
+p {
+    margin: 0;
+}
+  
+a {
+    color: $textLinkViolet;
+    text-decoration: none;
+    transition: color $transition;
+    &:hover {
+        color: $textLinkHover;
+        text-decoration: none;
+    }
+}
+  
+figure,
+blockquote {
+    margin: 0;
+}
+  
+input,
+textarea {
+    width: 100%;
+    padding: 0;
+    border: none;
+    font-family: 'Navigo', Helvetica, Arial, sans-serif;
+    background-color: transparent;
+}
+
+textarea {
+    resize: none;
+}
+
+input {
+    font-weight: inherit;
+}
+
+input[type='submit'] {
+    -webkit-appearance: none;
+}
+
+button {
+    font-family: 'Navigo', Helvetica, Arial, sans-serif;
+    text-align: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100vw;
+    min-height: 100vh;
+    color: $textViolet;
+    background-color: $bgGray;
+}
+
+.section {
+    position: relative;
+    padding: 60px 0;
+    overflow: hidden;
+    @media (min-width: 768px) {
+        padding: 75px 0;
+    }
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        & video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        & ~ * {
+            position: relative;
+        }
+        &.--tonning {
+            &:after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                opacity: .5;
+                background-color: #000;
+                pointer-events: none;
+                z-index: 0;
+            }
+        }
+    }
+    &__header {
+        position: relative;
+        &.--transparent {
+            color: $textWhite;
+            & .section__title {
+                margin-bottom: 0;
+                position: relative;
+                padding: 0;
+                &:first-of-type,
+                &:last-of-type {
+                    padding: 45px 30px 34px;
+                    @media (min-width: 768px) {
+                        padding: 62px 30px 33px;
+                    }
+                    @media (min-width: 992px) {
+                        padding: 64px 45px 33px;
+                    }
+                    @media (min-width: 1200px) {
+                        padding: 64px 45px 33px;
+                    }
+                    @media (min-width: 1920px) {
+                        padding: 60px 45px 30px;
+                    }
+                }
+                &:first-of-type {
+                    color: #fff;
+                    background: #000;
+                    mix-blend-mode: multiply;
+                }
+                &:last-of-type {
+                    position: absolute;
+                    inset: 0;
+                    color: #000;
+                    background-color: $bgViolet;
+                    mix-blend-mode: lighten;
+                    pointer-events: none;
+                }
+            }
+            & .section__text {
+                padding: 0 6% 60px 30px;
+                background-color: $bgViolet;
+                @media (min-width: 576px) {
+                    padding: 0 6% 60px 30px;
+                }
+                @media (min-width: 768px) {
+                    padding: 0 6% 55px 30px;
+                }
+                @media (min-width: 992px) {
+                    padding: 0 6% 85px 45px;
+                }
+                @media (min-width: 1200px) {
+                    padding: 0 12% 90px 45px;
+                }
+                @media (min-width: 1920px) {
+                    padding: 0 42% 90px 45px;
+                }
+            }
+        }
+    }
+    &__title {
+        margin-bottom: 34px;
+        @media (min-width: 576px) {
+            margin-bottom: 33px;
+        }
+        @media (min-width: 768px) {
+            margin-bottom: 37px;
+        }
+        @media (min-width: 992px) {
+            margin-bottom: 35px;
+        }
+        @media (min-width: 1200px) {
+            margin-bottom: 34px;
+        }
+    }
+    &__text {
+        & + & {
+            margin-top: 30px;
+        }
+    }
+    &__link {
+        display: inline-block;
+        margin-top: 52px;
+        @media (min-width: 768px) {
+            margin-top: 45px;
+        }
+    }
+}
+
+// Links
+.linkHead {
+    color: $textNav;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 2.5;
+    text-transform: uppercase;
+    letter-spacing: 0.23em;
+    @media (min-width: 576px) {
+        font-size: 12px;
+        line-height: 2;
+        letter-spacing: 0.25em;
+    }
+}
+
+.link {
+    display: inline-block;
+    color: $textLinkViolet;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0.255em;
+    transition: $transition;
+    &:hover {
+        color: $textLinkHover;
+    }
+    &--dark {
+        color: $textLinkVioletDark;
+    }
+    &--dashed {
+        & .link__text {
+            border-bottom: 1px dashed currentColor;
+        }
+    }
+    &--uppercase {
+        text-transform: uppercase;
+    }
+    &--right {
+        & .link__icon {
+            transform: rotate(-90deg);
+        }
+    }
+    &__icon {
+        margin-left: 10px;
+        fill: currentColor;
+        transform: translateY(-2px);
+    }
+}
+
+// Texts
+.title {
+    // H1
+    font-family: 'HeroNew', Helvetica, Arial, sans-serif;
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1;
+    @media (min-width: 768px) {
+        font-size: 80px;
+    }
+    @media (min-width: 1200px) {
+        font-size: 120px;
+    }
+    // H2
+    &--h2 {
+        font-size: 40px;
+        line-height: 1.25;
+        @media (min-width: 768px) {
+            font-size: 60px;
+            line-height: 1.16;
+        }
+        @media (min-width: 1200px) {
+            font-size: 70px;
+            line-height: 1.14;
+        }
+    }
+    // H3
+    &--h3 {
+        font-size: 30px;
+        line-height: 1.33;
+        @media (min-width: 768px) {
+            font-size: 36px;
+            line-height: 1.277;
+        }
+        @media (min-width: 992px) {
+            font-size: 40px;
+            line-height: 1.25;
+        }
+    }
+    // H4
+    &--mini {
+        font-size: 20px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        @media (min-width: 768px) {
+            font-size: 24px;
+            line-height: 1.416;
+        }
+        @media (min-width: 992px) {
+            font-size: 30px;
+            line-height: 1.33;
+        }
+    }
+    // H5
+    &--item {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    // Note
+    &--note {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+}
+
+.text {
+    font-weight: 300;
+    // Body L
+    &--body {
+        font-size: 18px;
+        line-height: 1.5;
+        @media (min-width: 768px) {
+            font-size: 20px;
+        }
+    }
+    // Lead
+    &--lead {
+        font-size: 20px;
+        line-height: 1.5;
+        @media (min-width: 768px) {
+            font-size: 24px;
+            line-height: 1.41;
+        }
+        @media (min-width: 1200px) {
+            font-size: 30px;
+            line-height: 1.66;
+        }
+    }
+    // Caption
+    &--caption {
+        font-size: 15px;
+        line-height: 1.66;
+    }
+    // Note
+    &--note {
+        font-size: 15px;
+        line-height: 1.66;
+    }
+}
+
+// Logo
+.logo {
+    color: currentColor;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1.28;
+}
+
+// Video
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+// Button
+.button {
+    padding: 26px 27px 19px;
+    color: $textViolet;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.66;
+    white-space: nowrap;
+    letter-spacing: 0.245em;
+    text-transform: uppercase;
+    background-color: $bgWhite;
+    transition: $transition;
+    cursor: pointer;
+    &:hover {
+        color: $textGray;
+        background-color: $bgVioletLight;
+    }
+    &--small {
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: 0.184em;
+    }
+}
+
+// Arrow
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 73px;
+    height: 73px;
+    padding: 9px;
+    border: 6px solid $bgGray;
+    background-color: $bgViolet;
+    transition: $transitionLong;
+    cursor: pointer;
+    @media (min-width: 992px) {
+        width: 100px;
+        height: 100px;
+        padding: 15px;
+        border-width: 10px;
+    }
+    &:hover {
+        background-color: $bgVioletLight;
+    }
+}
+
+// Pagination
+.swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-bullet {
+        position: relative;
+        width: 10px;
+        height: 10px;
+        background-color: rgb(45, 25, 64, .1);
+        overflow: hidden;
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+            background-color: $bgVioletLight;
+            transition: $transitionLong;
+            will-change: opacity, transform;
+        }
+        &-active {
+            &:after {
+                opacity: 1;
+                transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+            }
+        }
+    }
+}

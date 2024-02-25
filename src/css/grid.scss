@@ -1,0 +1,65 @@
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 360px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1920px
+) !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 534px,
+  md: 690px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1800px
+);
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12;
+$grid-gutter-width:           30px;
+
+// Container adaptive
+@media (min-width: 360px) {
+  .container {
+    padding: 0 20px !important;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: unset;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px !important;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+    padding: 0 15px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1800px;
+  }
+}

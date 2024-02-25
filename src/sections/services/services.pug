@@ -1,0 +1,74 @@
+mixin SectionServices()
+    section.section.services
+        .section__video.--tonning
+            video(autoplay="" loop="" muted="" poster="https://mainbit.ru/src/images/nashi-uslugi.jpg" preload="auto")
+                source(src="https://mainbit.ru/src/video/nashi-uslugi.mp4")
+                | Элемент video не поддерживается вашим браузером.
+        .container 
+            .row.no-gutters
+                .services__head.col-xl-9.col-lg-10.col-md-11.col-12
+                    .section__header.--transparent
+                        .section__title.title.title--h2 Наши услуги
+                        .section__title.title.title--h2 Наши услуги
+                        p.section__text.text.text--body 
+                            | Студия создает и&nbsp;продвигает в&nbsp;Сети продающие сайты. 
+                            | Разрабатывает мобильные приложения для iOS и&nbsp;Android. 
+                            | Поддерживает сайты и&nbsp;предоставляет услуги хостинга. 
+                            | А&nbsp;еще мы&nbsp;создаем запоминающиеся фирменные стили 
+                            | и&nbsp;разрабатываем PR-кампании.
+            ul.services__list.row.no-gutters 
+                li.services__item.col-lg-6.col-12
+                    .services__item-picture
+                        <svg class="services__item-icon" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 11.6666H95V86.6666H5V11.6666ZM11.6667 18.3333V25.8333H88.3333V18.3333H11.6667ZM11.6667 80V32.5H88.3333V80H11.6667ZM36.8916 48.238L32.2747 43.4287L19.4515 55.739L32.1804 68.977L36.9859 64.3563L28.8815 55.9277L36.8916 48.238ZM68.142 43.4287L63.5251 48.238L71.5352 55.9277L63.4307 64.3563L68.2363 68.977L80.9652 55.739L68.142 43.4287ZM52.7063 44.729L41.4563 64.2145L47.2298 67.5479L58.4798 48.0623L52.7063 44.729Z" fill="white"/></svg>
+                    .services__item-info 
+                        .services__item-title.title.title--mini Продающие сайты
+                        p.services__item-text.text.text--body
+                            | Он&nbsp;приносит вам куда больше денег, чем обычный. 
+                            | На&nbsp;нем реализованы десятки фишек, которые прямо или 
+                            | косвенно увеличивают продажи. При этом полноценную.
+                li.services__item.col-lg-6.col-12
+                    .services__item-picture
+                        <svg class="services__item-icon" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M82.8109 23.0755L49.1667 3.651L15.5225 23.0755V61.9245L49.1667 81.349L63.2245 73.2327L75.8179 92.6248L81.409 88.9939L69.0059 69.8948L82.8109 61.9245V23.0755ZM22.1891 58.0755V26.9245L49.1667 11.349L76.1442 26.9245V58.0755L49.1667 73.651L22.1891 58.0755Z" fill="white"/></svg>
+                    .services__item-info 
+                        .services__item-title.title.title--mini Продвижение сайтов
+                        p.services__item-text.text.text--body
+                            | Превращаем SEO в стабильный канал привлечения клиентов. 
+                            | В каждом проекте — продуманная стратегия, постоянный анализ 
+                            | данных и корректировка результатов.
+                li.services__item.col-lg-6.col-12
+                    .services__item-picture 
+                        <svg class="services__item-icon" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M49.9999 3.70825L64.001 34.0625L97.1961 37.9983L72.6541 60.6941L79.1688 93.4808L49.9999 77.1533L20.8311 93.4808L27.3457 60.6941L2.80371 37.9983L35.9989 34.0625L49.9999 3.70825ZM49.9999 19.625L40.4896 40.2434L17.9414 42.9169L34.6118 58.3332L30.1867 80.6039L49.9999 69.5133L69.8132 80.6039L65.388 58.3332L82.0584 42.9169L59.5103 40.2434L49.9999 19.625Z" fill="white"/></svg>
+                    .services__item-info 
+                        .services__item-title.title.title--mini Фирменный стиль
+                        p.services__item-text.text.text--body
+                            | При разработке фирменного стиля во главу угла ставим рост продаж, 
+                            | поэтому заказчик получает не просто «набор красивых картинок», 
+                            | а реальный инструмент.
+                li.services__item.col-lg-6.col-12
+                    .services__item-picture 
+                        <svg class="services__item-icon" width="100" height="100" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M26 7h68v106H26V7Zm8 8v90h52V15H75.5L73 20H47l-2.5-5H34Zm20 68h12v12H54V83Z" fill="#fff"></path></svg>
+                    .services__item-info 
+                        .services__item-title.title.title--mini Мобильные приложения
+                        p.services__item-text.text.text--body
+                            | Вы&nbsp;решили создать мобильное приложение? И&nbsp;правильно сделали, 
+                            | но&nbsp;не&nbsp;спешите. Ведь разработчиков много, а&nbsp;выбрать нужно 
+                            | только одного. клиентам студии MainBit она не&nbsp;знакома.
+                li.services__item.col-lg-6.col-12
+                    .services__item-picture
+                        <svg class="services__item-icon" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M63.8647 7.5H47.8907L45.9299 23.1867L37.1066 40.8333H34.1667H27.5H5V90.8333H34.1667V85H85.0143L96.1514 46.0201L87.5307 34.1667H66.8855L70.1919 22.2636L63.8647 7.5ZM27.5 84.1667V47.5H11.6667V84.1667H27.5ZM34.1667 78.3333H79.9857L88.8486 47.3132L84.1359 40.8333H58.1145L63.1414 22.7364L59.4687 14.1667H53.7759L52.4034 25.1467L41.2268 47.5H34.1667V78.3333Z" fill="white"/></svg>
+                    .services__item-info 
+                        .services__item-title.title.title--mini Медиа-кампании в&nbsp;интернете
+                        p.services__item-text.text.text--body
+                            | Обладаем экспертными знаниями в традиционных (СЕО, контекст) 
+                            | и нестандартных методах продвижения (видеохостинги, блоги, 
+                            | социальные сети, .
+                li.services__item.col-lg-6.col-12
+                    .services__item-picture 
+                        <svg class="services__item-icon" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M84.1663 5.08862V84.078L55.8782 63.3334H44.2687L50.1021 86.6667H31.9681L21.9681 63.3334H10.833V26.6667H54.7417L84.1663 5.08862ZM19.111 56.6667L17.4997 56.6667V33.3334H52.4997V56.6667L42.6021 56.6667H19.111ZM29.2213 63.3334L36.3641 80H41.5635L37.3969 63.3334H29.2213ZM59.1663 31.6891V57.4775L77.4997 70.922V18.2447L59.1663 31.6891Z" fill="white"/></svg>
+                    .services__item-info 
+                        .services__item-title.title.title--mini Оффлайн реклама
+                        p.services__item-text.text.text--body
+                            | Студия MainBit при разработке фирменного стиля во&nbsp;главу угла 
+                            | ставит именно рост продаж. Поэтому у&nbsp;нас вы&nbsp;получаете 
+                            | не&nbsp;просто &laquo;набор красивых картинок&raquo;, а&nbsp;реальный инструмент.
+

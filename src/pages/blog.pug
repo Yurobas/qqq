@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наш блог</title>
+    <link rel="stylesheet" href="/src/css/style.scss">
+
+    include ../sections/sections
+    include ../components/mixins
+</head>
+<body>
+
+    .wrapper
+        include ../components/header/header
+
+        main.page
+        
+            +SectionHero(
+                'Наш блог',
+                'Делимся профессиональными секретами и&nbsp;раскрываем тонкости выполнения отдельных видов работ. Материалы написаны на&nbsp;основе нашего опыта и&nbsp;имеют практическую ценность. Чтобы не&nbsp;пропустить очередную статью, подписывайтесь на&nbsp;обновления.',
+                {
+                    breadcrumbs: [
+                        {
+                            name: 'Блог',
+                            href: '/blog'
+                        }
+                        
+                    ]
+                }
+            )
+                
+
+        include ../components/footer/footer
+    
+    <script type="module" src="/src/js/index.js"></script>
+
+</body>
+</html>

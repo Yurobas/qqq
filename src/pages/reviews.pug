@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клиенты о нас</title>
+    <link rel="stylesheet" href="/src/css/style.scss">
+
+    include ../sections/sections
+    include ../components/mixins
+</head>
+<body>
+
+    .wrapper
+        include ../components/header/header
+
+        main.page
+        
+            +SectionHero(
+                'Клиенты о нас',
+                'При выполнении проекта мы&nbsp;нередко становимся частью команды заказчика: глубоко погружаемся в&nbsp;задачу, искренне переживаем за&nbsp;результат и&nbsp;общаемся с&nbsp;коллегами на&nbsp;одном языке. В&nbsp;сочетании с&nbsp;высокой результативностью такой подход неизменно вызывает благодарную реакцию со&nbsp;стороны клиентов. Некоторые отзывы мы&nbsp;получили в&nbsp;письменном виде и&nbsp;предлагаем их&nbsp;вашему вниманию.',
+                {
+                    breadcrumbs: [
+                        {
+                            name: 'Отзывы',
+                            href: '/reviews'
+                        }
+                        
+                    ]
+                }
+            )
+                
+
+        include ../components/footer/footer
+    
+    <script type="module" src="/src/js/index.js"></script>
+
+</body>
+</html>

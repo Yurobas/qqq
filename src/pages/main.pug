@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="/src/css/style.scss">
+
+    include ../sections/sections
+    include ../components/mixins
+</head>
+<body>
+
+    .wrapper
+        include ../components/header/header
+
+        main.page.--index
+        
+            +SectionHero(
+                'Вовремя, Качественно, Доступно',
+                'Мы&nbsp;создаем сайты любой степени сложности: от&nbsp;компактных визиток до&nbsp;масштабных порталов, от&nbsp;промо&nbsp;-&nbsp;сайтов до&nbsp;интернет-магазинов. У&nbsp;нас нет проходных проектов.',
+                {
+                    triggers: true
+                }
+            )
+
+            +SectionInfo
+            +SectionPortfolio
+            +SectionServices
+            +SectionReviews
+            +SectionBlog
+
+            +print
+
+        include ../components/footer/footer
+    
+    <script type="module" src="/src/js/index.js"></script>
+
+</body>
+</html>

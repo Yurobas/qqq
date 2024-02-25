@@ -1,0 +1,33 @@
+mixin SectionHero(title, description, params)
+    section.section.hero
+        .hero__video
+            <video class="video" autoplay="" loop="" muted="" poster="https://mainbit.ru/src/images/header-bg-default.jpg" preload="auto">
+                <source src="https://mainbit.ru/src/video/glavnaya.mp4">
+                | Элемент video не поддерживается вашим браузером.
+            </video>
+        .container
+            .row.no-gutters
+                .hero__offset.col-sm-12 MainBit
+                if params.breadcrumbs
+                    .hero__breadcrumbs.col-sm-12
+                        .hero__breadcrumbs-content
+                            .hero__breadcrumbs-list
+                                a.hero__breadcrumbs-item.text.text--note(href="/") Главная
+                                each link in params.breadcrumbs
+                                    a.hero__breadcrumbs-item.text.text--note(href=link.href)= link.name
+                .hero__title.col-sm-12
+                    .hero__title-text.title
+                        span= title
+                    .hero__title-bg.title
+                        span= title
+                .hero__content.col-sm-12
+                    .hero__box
+                        .hero__description.text.text--body!= description
+                        if params.triggers
+                            .hero__triggers
+                                .hero__button.button(data-feedback)
+                                    span Оставить заявку
+                                a.hero__scroll.link.link--dashed.link--uppercase.link--down(href="#info") 
+                                    span.link__text Познакомиться ближе
+                                    svg.link__icon(width="12" height="13" xmlns="http://www.w3.org/2000/svg")
+                                        path(d="m1.227 6.15 3.915 3.675V.63h1.5v9.195l3.915-3.675h.975v1.065l-5.64 5.445-5.64-5.445V6.15h.975Z")

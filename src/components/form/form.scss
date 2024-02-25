@@ -1,0 +1,122 @@
+.form {
+    &.--success {
+        & .form__container {
+            opacity: 0;
+            transform: translate3d(0, 30px, 1px);
+        }
+        & .form__success {
+            opacity: 1;
+            transform: none;
+            pointer-events: unset;
+        }
+    }
+    &__inner {
+        position: relative;
+    }
+    &__title {
+        margin-bottom: 23px;
+    }
+    &__content {
+        margin-top: 30px;
+        @media (min-width: 576px) {
+            margin-top: 30px;
+        }
+        @media (min-width: 768px) {
+            max-width: 610px;
+            margin-top: 40px;
+        }
+        @media (min-width: 1200px) {
+            max-width: 730px;
+        }
+        @media (min-width: 1920px) {
+            max-width: 870px;
+        }
+    }
+    &__container {
+        transition: $transitionHeader;
+    }
+    &__label {
+        position: relative;
+        & + & {
+            margin-top: 33px;
+            @media (min-width: 576px) {
+                margin-top: 30px;
+            }
+            @media (min-width: 768px) {
+                margin-top: 29px;
+            }
+        }
+        &.--focus,
+        &.--active {
+            &.--error {
+                & .form__placeholder {
+                    transform: translate3d(calc(-15% + 10px), calc(-50% - 30px), 0) scale(0.7);
+                }
+                & .form__error {
+                    transform: translate3d(calc(-15%), calc(-50% - 30px), 0) scale(0.7);
+                }
+            }
+            & .form__placeholder {
+                transform: translate3d(calc(-15%), calc(-50% - 30px), 0) scale(0.7);
+            }
+            & .form__error {
+                transform: translate3d(calc(-15% - 10px), calc(-50% - 30px), 0) scale(0.7);
+            }
+        }
+        &.--error {
+            & .form__error {
+                opacity: 1;
+                transform: translate3d(0, -50%, 0);
+            }
+            & .form__placeholder {
+                opacity: 0;
+                transform: translate3d(10px, -50%, 0);
+            }
+            & .form__input {
+                border-color: $textError;
+            }
+        }
+    }
+    &__input {
+        width: 100%;
+        padding: 29px 0 11px;
+        color: $textWhite;
+        border-bottom: 1px solid $bgGray60;
+        transition: $transition;
+    }
+    &__error,
+    &__placeholder {
+        position: absolute;
+        top: calc(50% + 10px);
+        left: 0;
+        transform: translate3d(0, -50%, 0);
+        pointer-events: none;
+        transition: $transition;
+    }
+    &__placeholder {
+        color: $textGray60;
+    }
+    &__error {
+        color: $textError;
+        opacity: 0;
+        transform: translate3d(-10px, -50%, 0);
+    }
+    &__button {
+        width: 100%;
+        margin-top: 45px;
+        @media (min-width: 768px) {
+            width: unset;
+            max-width: 610px;
+        }
+    }
+    &__success {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        will-change: opacity, transform;
+        transform: translate3d(0, -30px, 1px);
+        transition: $transitionHeader .35s;
+        pointer-events: none;
+    }
+}

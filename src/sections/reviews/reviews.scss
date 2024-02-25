@@ -1,0 +1,217 @@
+.reviews {
+    @media (min-width: 768px) {
+        padding-top: 90px;
+    }
+    @media (max-width: 767px) {
+        padding-bottom: 0;
+    }
+    & .section__title {
+        @media (min-width: 768px) {
+            margin-bottom: 32px;
+        }
+        @media (min-width: 992px) {
+            margin-bottom: 51px;
+        }
+        @media (min-width: 1200px) {
+            margin-bottom: 51px;
+        }
+        @media (min-width: 1920px) {
+            margin-bottom: 47px;
+        }
+    }
+    & .swiper {
+        overflow: visible;
+        &-pagination {
+            margin-top: 10px;
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+    &__slider {
+        margin-top: 60px;
+        @media (min-width: 576px) {
+            margin-top: 75px;
+        }
+    }
+    &__slide {
+        position: relative;
+        padding: 0;
+        @media (min-width: 576px) {
+            width: 82%;
+        }
+        @media (min-width: 768px) {
+            width: 82.5%;
+        }
+        @media (min-width: 992px) {
+            width: 83%;
+        }
+        @media (min-width: 1200px) {
+            width: 72.75%;
+        }
+        &.swiper-slide-active {
+            & .reviews__arrow {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+    }
+    &__card {
+        position: relative;
+        background-color: $bgWhite;
+        padding: 50px 20px;
+        @media (min-width: 576px) {
+            padding: 36px 20px;
+        }
+        @media (min-width: 768px) {
+            padding: 52px 30px;
+        }
+        @media (min-width: 992px) {
+            height: 365px;
+            padding: 68px 75px;
+        }
+        @media (min-width: 1200px) {
+            height: 495px;
+            padding: 68px 18px 68px 75px;
+        }
+        @media (min-width: 1920px) {
+            height: 395px;
+            padding: 68px 75px;
+        }
+    }
+    &__link {
+        margin-top: 33px;
+        font-size: 20px;
+        line-height: 1.5;
+        letter-spacing: unset;
+        @media (min-width: 576px) {
+            margin-top: 43px;
+        }
+    }
+    &__signature {
+        width: 195px;
+        margin-top: 30px;
+        @media (min-width: 576px) {
+            position: absolute;
+            right: -20px;
+            bottom: -20px;
+            width: 230px;
+            margin-top: 0;
+        }
+        @media (min-width: 768px) {
+            right: 12%;
+            bottom: -10%;
+        }
+        @media (min-width: 992px) {
+            right: -20px;
+            bottom: -20px;
+            width: 280px;
+        }
+    }
+    &__arrow {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transition: $transition;
+        @media (min-width: 576px) {
+            display: block;
+        }
+    }
+    &__prev {
+        right: -15px;
+        transform: translate(50%, -50%) rotate(180deg);
+        @media (min-width: 1200px) {
+            right: 0;
+        }
+    }
+    &__next {
+        left: -15px;
+        transform: translate(-50%, -50%);
+        @media (min-width: 1200px) {
+            left: 0;
+        }
+    }
+    &__author {
+        position: relative;
+        padding: 37px 0 0 45px;
+        @media (min-width: 576px) {
+            padding: 52px 0 0 46px;
+        }
+        @media (min-width: 768px) {
+            padding: 50px 0 0 44px;
+        }
+        @media (min-width: 992px) {
+            padding: 47px 0 0 60px;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 60px;
+            border-top: 30px solid #fff;
+            border-left: 30px solid transparent;
+            pointer-events: none;
+            z-index: 0;
+        }
+        &-name {
+            margin-bottom: 9px;
+        }
+    }
+    &__subtitle {
+        max-width: 550px;
+        margin-bottom: 70px;
+        @media (min-width: 576px) {
+            margin-bottom: 70px;
+        }
+        @media (min-width: 768px) {
+            margin-bottom: 45px;
+        }
+    }
+    &__brands {
+        margin-top: 61px;
+        @media (min-width: 576px) {
+            margin-top: 58px;
+        }
+        @media (min-width: 768px) {
+            margin-top: 71px;
+        }
+    }
+    &__brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (min-width: 768px) {
+            padding: 45px 0;
+        }
+        @media (min-width: 992px) {
+            padding: 45px 0;
+        }
+        @media (min-width: 1200px) {
+            padding: 45px;
+        }
+    }
+    &__list {
+        & .swiper-wrapper {
+            align-items: center;
+            @media (min-width: 768px) {
+                flex-wrap: wrap;
+                align-items: stretch;
+            }
+        }
+        & .swiper-slide {
+            @media (min-width: 768px) {
+                width: calc(100% / 3);
+            }
+            @media (min-width: 992px) {
+                width: calc(100% / 4);
+            }
+        }
+        & .swiper-pagination {
+            margin-top: 70px;
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+}

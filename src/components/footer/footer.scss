@@ -1,0 +1,110 @@
+.footer {
+    padding: 33px 0;
+    color: $textGray;
+    background-color: $bgViolet;
+    @media (min-width: 576px) {
+        padding: 42px 0 33px;
+    }
+    @media (min-width: 768px) {
+        padding: 45px 0 30px;
+    }
+    @media (min-width: 1200px) {
+        padding: 48px 0 30px;
+    }
+    &__top {
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+        margin-top: -25px;
+        @media (min-width: 576px) {
+            margin-top: -28px;
+        }
+        @media (min-width: 768px) {
+            justify-content: flex-end;
+            margin-top: -27px;
+        }
+        @media (min-width: 992px) {
+            justify-content: flex-start;
+        }
+    }
+    &__block {
+        margin-top: 25px;
+        @media (min-width: 576px) {
+            margin-top: 28px;
+        }
+        @media (min-width: 768px) {
+            margin-top: 27px;
+        }
+        &:nth-of-type(2) {
+            @media (min-width: 768px) {
+                padding-left: 15px;
+            }
+            @media (min-width: 992px) {
+                padding-left: 10px;
+            }
+        }
+        &:last-of-type {
+            @media (min-width: 768px) {
+                padding-left: 15px;
+            }
+            @media (min-width: 992px) {
+                padding-left: 20px;
+            }
+        }
+    }
+    &__title {
+        display: block;
+        color: $textGray;
+        margin-bottom: 25px;
+        @media (min-width: 576px) {
+            margin-bottom: 23px;
+        }
+        @media (min-width: 768px) {
+            margin-bottom: 24px;
+        }
+        @media (min-width: 992px) {
+            margin-bottom: 26px;
+            font-size: 24px;
+            line-height: 1.41;
+        }
+    }
+    &__info {
+        max-width: 300px;
+    }
+    &__mail {
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+    &__socials {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+    }
+    &__social {
+        &:not(:last-of-type) {
+            &:after {
+                content: '|';
+                display: inline-block;
+                margin: 0 10px;
+                color: $textWhite;
+            }
+        }
+    }
+    &__bottom {
+        margin-top: 40px;
+        padding-top: 17px;
+        border-top: 1px solid $borderGray;
+        @media (min-width: 992px) {
+            margin-top: 57px;
+        }
+        @media (min-width: 1200px) {
+            padding-top: 15px;
+        }
+    }
+    &__copyright {
+        color: $textGray60;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 2;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши проекты</title>
+    <link rel="stylesheet" href="/src/css/style.scss">
+
+    include ../sections/sections
+    include ../components/mixins
+</head>
+<body>
+
+    .wrapper
+        include ../components/header/header
+
+        main.page
+        
+            +SectionHero(
+                'Наши проекты',
+                'За&nbsp;годы деятельности мы&nbsp;наработали большое портфолио работ в&nbsp;различных областях. Мы&nbsp;растем и&nbsp;учимся, постоянно улучшая качество и&nbsp;уровень работ. Из&nbsp;огромного количества реализованных проектов мы&nbsp;отобрали лучшие и&nbsp;предлагаем их&nbsp;вашему вниманию.',
+                {
+                    breadcrumbs: [
+                        {
+                            name: 'Портфолио',
+                            href: '/portfolio'
+                        }
+                        
+                    ]
+                }
+            )
+
+
+            +SectionPortfolioList([
+                {
+                    src: '/src/images/portfolio-01.jpg',
+                    name: 'Dock Prague',
+                    text: 'сайт-визитка для мульпликационной студии полного цикла'
+                },{
+                    src: '/src/images/portfolio-02.jpg',
+                    name: 'Dock Prague',
+                    text: 'сайт-визитка для мульпликационной студии полного цикла'
+                },{
+                    src: '/src/images/portfolio-03.jpg',
+                    name: 'Dock Prague',
+                    text: 'сайт-визитка для мульпликационной студии полного цикла'
+                },{
+                    src: '/src/images/portfolio-04.jpg',
+                    name: 'Dock Prague',
+                    text: 'сайт-визитка для мульпликационной студии полного цикла'
+                },{
+                    src: '/src/images/portfolio-05.jpg',
+                    name: 'Dock Prague',
+                    text: 'сайт-визитка для мульпликационной студии полного цикла'
+                },{
+                    src: '/src/images/portfolio-06.jpg',
+                    name: 'Dock Prague',
+                    text: 'сайт-визитка для мульпликационной студии полного цикла'
+                }
+            ])
+                
+
+        include ../components/footer/footer
+    
+    <script type="module" src="/src/js/index.js"></script>
+
+</body>
+</html>

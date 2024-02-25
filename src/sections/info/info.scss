@@ -1,0 +1,157 @@
+.info {
+    padding-top: 60px;
+    @media (min-width: 768px) {
+        padding-top: 90px;
+    }
+    &__title {
+        margin-bottom: 34px;
+        @media (min-width: 576px) {
+            margin-bottom: 33px;
+        }
+        @media (min-width: 768px) {
+            max-width: 650px;
+            margin-bottom: 37px;
+        }
+        @media (min-width: 992px) {
+            margin-bottom: 35px;
+        }
+        @media (min-width: 1200px) {
+            margin-bottom: 52px;
+        }
+    }
+    &__content {
+        padding-bottom: 41px;
+        border-bottom: 10px solid $borderGrayLight;
+        @media (min-width: 768px) {
+            padding-bottom: 70px;
+        }
+        @media (min-width: 1920px) {
+            max-width: 1320px;
+        }
+    }
+    &__person {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 75px;
+        @media (min-width: 576px) {
+            align-items: stretch;
+            flex-direction: row;
+        }
+        @media (min-width: 768px) {
+            padding-top: 90px;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(54px, -10px);
+            width: 40px;
+            height: 40px;
+            background: url('/src/images/arrow-message.svg') 50% 50% no-repeat $bgGray;
+            @media (min-width: 576px) {
+                transform: translate(55px, -10px);
+            }
+            @media (min-width: 768px) {
+                transform: translate(60px, -10px);
+            }
+            @media (min-width: 992px) {
+                transform: translate(165px, -10px);
+            }
+            @media (min-width: 1200px) {
+                transform: translate(70px, -10px);
+            }
+            @media (min-width: 1920px) {
+                transform: translate(15px, -10px);
+            }
+        }
+        &-picture {
+            width: 220px;
+            margin-bottom: 30px;
+            @media (min-width: 576px) {
+                width: 240px;
+                margin-right: 45px;
+            }
+        }
+        &-about {
+            position: relative;
+        }
+        &-name {
+            margin-bottom: 9px;
+        }
+        &-sign {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 116px;
+            transform: translateY(35%);
+            @media (min-width: 576px) {
+                left: 0;
+                bottom: 0;
+                width: unset;
+                transform: translateY(20%);
+            }
+        }
+    }
+    &__list {
+        margin-top: 10px;
+        @media (min-width: 576px) {
+            margin-top: -13px;
+        }
+        @media (min-width: 768px) {
+            margin-top: -9px;
+        }
+        @media (min-width: 992px) {
+            margin-top: -30px;
+        }
+        @media (min-width: 1200px) {
+            margin-top: 4px;
+        }
+        @media (min-width: 1920px) {
+            margin-top: -30px;
+        }
+    }
+    &__item {
+        margin-top: 45px;
+        @media (min-width: 576px) {
+            margin-top: 43px;
+        }
+        @media (min-width: 768px) {
+            margin-top: 55px;
+        }
+        @media (min-width: 992px) {
+            margin-top: 73px;
+            margin-right: 10px;
+        }
+        @media (min-width: 1200px) {
+            margin-top: 41px;
+            margin-right: 0;
+        }
+        @media (min-width: 1920px) {
+            margin-top: 73px;
+            margin-right: 10px;
+        }
+        &-icon {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+        &-name {
+            margin-bottom: 19px;
+            @media (min-width: 768px) {
+                max-width: 400px;
+            }
+        }
+        &-text {
+            @media (min-width: 1200px) {
+                max-width: 355px;
+            }
+            @media (min-width: 1920px) {
+                max-width: 490px;
+            }
+        }
+    }
+}

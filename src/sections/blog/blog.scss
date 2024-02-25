@@ -1,0 +1,184 @@
+.blog {
+    position: relative;
+    margin-top: 60px;
+    padding-top: 0;
+    color: $textGray;
+    @media (max-width: 767px) {
+        padding-bottom: 0;
+    }
+    @media (min-width: 992px) {
+        margin-top: 55px;
+    }
+    @media (min-width: 1200px) {
+        margin-top: 75px;
+    }
+    & .section__title {
+        @media (max-width: 767px) {
+            margin-bottom: 25px;
+        }
+    }
+    &__head {
+        position: relative;
+        padding: 47px 0;
+        z-index: 1;
+        @media (min-width: 576px) {
+            padding: 45px 0;
+        }
+        @media (min-width: 768px) {
+            padding: 60px 0;
+        }
+        & .section__title {
+            @media (min-width: 992px) {
+                font-size: 70px;
+                line-height: 1.14;
+            }
+        }
+    }
+    &__list {
+        justify-content: space-between;
+        @media (min-width: 576px) {
+            flex-direction: column;
+        }
+        @media (min-width: 768px) {
+            margin-top: 46px;
+            flex-direction: row;
+        }
+        @media (min-width: 992px) {
+            margin-top: 40px;
+        }
+        @media (min-width: 1200px) {
+            margin-top: 68px;
+        }
+        @media (min-width: 1920px) {
+            margin-top: 95px;
+        }
+    }
+    &__item {
+        position: relative;
+        width: 100vw;
+        min-width: 100vw;
+        margin-left: -20px;
+        color: $textGray;
+        @media (min-width: 576px) {
+            min-width: unset;
+        }
+        @media (max-width: 767px) {
+            padding: 60px 20px 75px;
+        }
+        @media (min-width: 768px) {
+            position: static;
+            width: calc(100% / 3);
+        }
+        &:first-of-type {
+            @media (max-width: 767px) {
+                position: static;
+                padding-top: 15px;
+            }
+            & .blog__bg {
+                left: 0;
+            }
+        }
+        &:nth-of-type(2) {
+            @media (min-width: 768px) {
+                padding-left: 2.85%;
+            }
+            & .blog__bg {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &:last-of-type {
+            @media (min-width: 768px) {
+                padding-left: 5.7%;
+            }
+            & .blog__bg {
+                right: 0;
+            }
+        }
+        &:hover {
+            & .blog__image {
+                transform: scale3d(1.22, 1.22, 1.22);
+            }
+            & .blog__footer:before {
+                width: 35%;
+                background-color: $textLinkHover;
+                @media (min-width: 768px) {
+                    width: 65%;
+                }
+            }
+        }
+        & article {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+    &__title,
+    &__footer {
+        position: relative;
+        z-index: 1;
+    }
+    &__title {
+        margin-bottom: 44px;
+        font-size: 24px;
+        line-height: 1.416;
+        @media (min-width: 768px) {
+            margin-bottom: 30px;
+        }
+        @media (min-width: 1200px) {
+            font-size: 30px;
+            line-height: 1.33;
+        }
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 0;
+        @media (min-width: 576px) {
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            width: calc(100% / 3 + 1px);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(45,25,64,.8);
+        }
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        will-change: transform;
+        transition: $transitionLong;
+    }
+    &__footer {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+        &:before {
+            content: '';
+            width: 0;
+            height: 8px;
+            will-change: width;
+            background-color: $bgWhite;
+            transition: $transitionLong;
+        }
+    }
+    &__icon {
+        width: 48px;
+        min-width: 48px;
+        height: 48px;
+        & svg {
+            fill: currentColor;
+        }
+    }
+}
