@@ -1,0 +1,16 @@
+mixin SectionBlogList(items)
+    section.blogList
+        each item in items
+            article.blogList__item
+                a.blogList__link(href="/article")
+                    .blogList__title.title.title--mini= item.title 
+                p.blogList__text.text.text--body= item.text
+                ul.blogList__tags
+                    each tag in item.tags
+                        li.blogList__tag 
+                            a.blogList__tag-link(href="/article")= tag
+                .blogList__footer 
+                    .blogList__author.text.text--note= item.author 
+                    date.blogList__date.text.text--note= item.date
+        .blogList__pagination
+            +pagination

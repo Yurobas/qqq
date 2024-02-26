@@ -10,6 +10,56 @@
             pointer-events: unset;
         }
     }
+    &--subscribe {
+        & .form__label {
+            &.--focus,
+            &.--active {
+                & .form__placeholder {
+                    transform: translate3d(-12%, calc(-50% - 28px), 0) scale(.7);
+                }
+                &.--error {
+                    & .form__placeholder {
+                        transform: translate3d(-12%, calc(-50% - 28px), 0) scale(.7);
+                    }
+                }
+            }
+            &.--error {
+                border-color: $textErrorDark;
+                & .form__placeholder {
+                    opacity: 1;
+                    color: $textErrorDark;
+                    transform: translate3d(0, -50%, 0);
+                }
+            }
+        }
+        & .form__input {
+            padding: 14px 20px 4px;
+            color: $textViolet;
+            border: 1px solid $borderViolet40;
+        }
+        & .form__placeholder {
+            top: calc(50% + 5px);
+            left: 10px;
+            padding: 0 10px;
+            color: $textNav;
+            background-color: $bgGray;
+        }
+        & .form__button {
+            max-width: unset;
+            margin-top: 20px;
+        }
+        & .form__success {
+            top: 50%;
+            transform: translate3d(0, calc(-50% - 30px), 1px);
+            &-title {
+                font-size: 17px;
+                font-weight: 800;
+                line-height: 1.76;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+            }
+        }
+    }
     &__inner {
         position: relative;
     }

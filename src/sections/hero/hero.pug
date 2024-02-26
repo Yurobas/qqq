@@ -17,12 +17,18 @@ mixin SectionHero(title, description, params)
                                     a.hero__breadcrumbs-item.text.text--note(href=link.href)= link.name
                 .hero__title.col-sm-12
                     .hero__title-text.title
-                        span= title
+                        span!= title
                     .hero__title-bg.title
-                        span= title
+                        span!= title
                 .hero__content.col-sm-12
                     .hero__box
-                        .hero__description.text.text--body!= description
+                        if description
+                            .hero__description.text.text--body!= description
+                        if params.contacts 
+                            .hero__contacts
+                                a.hero__phone.text.text--lead(href="tel:+74959782708") +7 495 978-27-08
+                                a.hero__mail.text.text--lead(href="mailto:info@mainbit.ru") info@mainbit.ru
+                            .hero__address.text.text--body Москва, Старопетровский проезд, д. 7а, стр.&nbsp;6, оф.&nbsp;600. Ближайшая станция метро&nbsp;&mdash; &laquo;Войковская&raquo;.
                         if params.triggers
                             .hero__triggers
                                 .hero__button.button(data-feedback)

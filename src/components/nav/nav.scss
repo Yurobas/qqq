@@ -19,6 +19,12 @@
         align-items: center;
     }
     &__item {
+        &.--active {
+            & .nav__link {
+                color: $textViolet;
+                pointer-events: none;
+            }
+        }
         &:not(:last-of-type) {
             margin-right: 30px;
             @media (min-width: 992px) {

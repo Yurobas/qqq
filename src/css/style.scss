@@ -14,6 +14,8 @@
 @import '/src/components/nav/nav.scss';
 @import '/src/components/form/form.scss';
 @import '/src/components/print/print.scss';
+@import '/src/components/asideBlock/asideBlock.scss';
+@import '/src/components/pagination/pagination.scss';
 @import '/src/components/header/header.scss';
 @import '/src/components/footer/footer.scss';
 
@@ -24,4 +26,6 @@
 @import '/src/sections/portfolioList/portfolioList.scss';
 @import '/src/sections/services/services.scss';
 @import '/src/sections/reviews/reviews.scss';
+@import '/src/sections/reviewsList/reviewsList.scss';
 @import '/src/sections/blog/blog.scss';
+@import '/src/sections/blogList/blogList.scss';

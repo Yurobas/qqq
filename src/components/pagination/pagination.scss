@@ -1,0 +1,30 @@
+.pagination {
+    display: flex;
+    &__link {
+        position: relative;
+        width: 60px;
+        min-width: 60px;
+        height: 60px;
+        color: $textViolet;
+        background-color: $bgWhite;
+        transition: $transition;
+        &:hover {
+            color: $textWhite;
+            background-color: $bgVioletLight;
+        }
+        &:not(:last-of-type) {
+            margin-right: 2px;
+        }
+        &.--active {
+            color: $textWhite;
+            background-color: $bgViolet;
+            pointer-events: none;
+        }
+    }
+    &__value {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

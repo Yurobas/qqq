@@ -7,6 +7,7 @@ $bgVioletLight: #b368ff;
 
 // Text
 $textError: #f66;
+$textErrorDark: #FF4A26;
 $textWhite: #FFF;
 $textGray: #F6F5F7;
 $textGray60: #f6f5f799;
@@ -20,6 +21,8 @@ $textNav: #2D194099;
 $borderGray: #F6F5F733;
 $borderGrayLight: #e2dfe5;
 $borderViolet10: #2d19401a;
+$borderViolet15: #2d194026;
+$borderViolet40: #2d194066;
 
 // Transitions
 $transition: .25s;
@@ -28,4 +31,5 @@ $transitionHeader: .55s ease-out;
 
 // Shadows
 $shadow: 0 40px 100px rgba(0,0,0,.8), 0 20px 60px rgba(0,0,0,.4);
+$shadowCard: 0 30px 70px rgb(45, 25, 64, .1);
 $shadowLight: 0 30px 100px rgba(45,25,64,.45), 0 10px 60px rgba(0,0,0,.2);

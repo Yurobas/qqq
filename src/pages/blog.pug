@@ -14,7 +14,7 @@
     .wrapper
         include ../components/header/header
 
-        main.page
+        .page
         
             +SectionHero(
                 'Наш блог',
@@ -29,8 +29,90 @@
                     ]
                 }
             )
-                
 
+            .page__layout
+                .container
+                    .page__row.row
+                        main.page__content.col-lg-8.col-12
+                            +SectionBlogList([
+                                {
+                                    title: 'Оптимизация под мобильные устройства',
+                                    text: 'В прошлой статье мы разобрались mobile-first индексами. Но такой подход — это перспектива хоть и близкого, но все-таки будущего. А пока давайте разберемся, что нужно сделать уже сейчас, чтобы подружить ваш сайт с мобильными устройствами.',
+                                    tags: [
+                                        'Техническая оптимизация',
+                                        'Поисковое продвижение',
+                                        'Методы продвижения',
+                                    ],
+                                    author: 'Сергей Анисимов',
+                                    date: '15 ноября 2017'
+                                },{
+                                    title: 'Оптимизация под мобильные устройства',
+                                    text: 'В прошлой статье мы разобрались mobile-first индексами. Но такой подход — это перспектива хоть и близкого, но все-таки будущего. А пока давайте разберемся, что нужно сделать уже сейчас, чтобы подружить ваш сайт с мобильными устройствами.',
+                                    tags: [
+                                        'Техническая оптимизация',
+                                        'Поисковое продвижение',
+                                        'Методы продвижения',
+                                    ],
+                                    author: 'Сергей Анисимов',
+                                    date: '15 ноября 2017'
+                                },{
+                                    title: 'Оптимизация под мобильные устройства',
+                                    text: 'В прошлой статье мы разобрались mobile-first индексами. Но такой подход — это перспектива хоть и близкого, но все-таки будущего. А пока давайте разберемся, что нужно сделать уже сейчас, чтобы подружить ваш сайт с мобильными устройствами.',
+                                    tags: [
+                                        'Техническая оптимизация',
+                                        'Поисковое продвижение',
+                                        'Методы продвижения',
+                                    ],
+                                    author: 'Сергей Анисимов',
+                                    date: '15 ноября 2017'
+                                },{
+                                    title: 'Оптимизация под мобильные устройства',
+                                    text: 'В прошлой статье мы разобрались mobile-first индексами. Но такой подход — это перспектива хоть и близкого, но все-таки будущего. А пока давайте разберемся, что нужно сделать уже сейчас, чтобы подружить ваш сайт с мобильными устройствами.',
+                                    tags: [
+                                        'Техническая оптимизация',
+                                        'Поисковое продвижение',
+                                        'Методы продвижения',
+                                    ],
+                                    author: 'Сергей Анисимов',
+                                    date: '15 ноября 2017'
+                                }
+                            ])
+                        aside.page__aside.col-xxl-3.col-lg-4.col-12
+                            .asideBlock
+                                .asideBlock__title Держите меня в&nbsp;курсе
+                                p.asideBlock__text Оформив подписку, вы&nbsp;будете получать наши самые свежие материалы из&nbsp;мира продвижения сайтов в&nbsp;интернете.
+                                .asideBlock__subscribe 
+                                    form.form.form--subscribe
+                                        .form__inner
+                                            .form__container
+                                                .form__label.text.text--body
+                                                    input.form__input(name="email")
+                                                    span.form__placeholder E-mail
+                                                .form__button
+                                                    button.button.button--mini.button--wide(type="submit") Оформить подписку
+                                            .form__success 
+                                                .form__success-title СПАСИБО ЗА ПОДПИСКУ!
+
+                            .asideBlock
+                                .asideBlock__title Популярные статьи
+                                p.asideBlock__text 
+                                .asideBlock__links 
+                                    a.asideBlock__link.text.text--body(href="/article") Критерии качества постоянных ссылок: тематичность донора и&nbsp;контекст размещенной ссылки
+                                    a.asideBlock__link.text.text--body(href="/article") Критерии качества постоянных ссылок: региональность донора
+                                    a.asideBlock__link.text.text--body(href="/article") Критерии качества постоянных ссылок: траст сайта-донора
+                                    a.asideBlock__link.text.text--body(href="/article") Постоянные ссылки
+                                    a.asideBlock__link.text.text--body(href="/article") Арендные ссылки
+
+                            .asideBlock
+                                .asideBlock__title Популярные статьи
+                                p.asideBlock__text 
+                                .asideBlock__tags 
+                                    a.asideBlock__tag.text.text--body(href="/article") cсылочная оптимизация
+                                    a.asideBlock__tag.text.text--body(href="/article") виды сайтов
+                                    a.asideBlock__tag.text.text--body(href="/article") доменные факторы
+                                    a.asideBlock__tag.text.text--body(href="/article") инструментарий оптимизатора
+                                    a.asideBlock__tag.text.text--body(href="/article") логотип
+                
         include ../components/footer/footer
     
     <script type="module" src="/src/js/index.js"></script>

@@ -121,12 +121,25 @@ window.addEventListener('DOMContentLoaded', () => {
                 event.preventDefault()
                 
                 inputs.forEach(input => {
+                    const type = input.name
                     const label = input.closest('.form__label')
-                    if (input.value.length < 1) {
-                        check = false
-                        label.classList.add('--error')
+
+                    if (type != 'email') {
+                        if (input.value.length < 1) {
+                            check = false
+                            label.classList.add('--error')
+                        } else {
+                            label.classList.remove('--error')
+                        }
                     } else {
-                        label.classList.remove('--error')
+                        const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+
+                        if (!emailRegex.test(input.value)) {
+                            check = false
+                            label.classList.add('--error')
+                        } else {
+                            label.classList.remove('--error')
+                        }
                     }
                 })
 
@@ -331,8 +344,9 @@ window.addEventListener('DOMContentLoaded', () => {
         })
 
         modal.addEventListener('click', event => {
-            const target = event.target
-            if (target !== image) modal.classList.remove('--show')
+            modal.classList.remove('--show')
+            // const target = event.target
+            // if (target !== image) modal.classList.remove('--show')
         })
     }()
 

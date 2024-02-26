@@ -1,0 +1,51 @@
+.asideBlock {
+    @media (min-width: 992px) {
+        max-width: 375px;
+    }
+    & + & {
+        margin-top: 47px;
+        @media (min-width: 992px) {
+            margin-top: 75px;
+        }
+    }
+    &__title {
+        margin-bottom: 15px;
+        font-size: 17px;
+        font-weight: 800;
+        line-height: 1.76;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+    &__text {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.33;
+    }
+    &__subscribe {
+        margin-top: 33px;
+    }
+    &__text,
+    &__subscribe {
+        @media (min-width: 992px) {
+            max-width: 308px;
+        }
+    }
+    &__links,
+    &__tags {
+        display: flex;
+        flex-direction: column;
+    }
+    &__link,
+    &__tag {
+        padding: 16px 0 15px;
+        color: $textViolet;
+        border-bottom: 1px solid $borderViolet15;
+    }
+    &__tag {
+        &:before {
+            content: '#';
+            display: inline-block;
+            margin-right: 20px;
+        }
+    }
+}

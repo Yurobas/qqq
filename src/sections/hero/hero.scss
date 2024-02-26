@@ -116,12 +116,6 @@
             align-items: baseline;
             padding: 39px 0 16px;
             border-bottom: 1px solid $textGray60;
-            @media (min-width: 576px) {
-                padding: 39px 0 16px;
-            }
-            @media (min-width: 1920px) {
-                padding: 34px 0 20px;
-            }
         }
         &-item {
             color: $textWhite;
@@ -235,5 +229,35 @@
             margin-top: 0;
             transform: translateY(2px);
         }
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 576px) {
+            align-items: center;
+            flex-direction: row;
+        }
+    }
+    &__address,
+    &__phone {
+        color: $textGray;
+    }
+    &__phone,
+    &__mail {
+        font-weight: 200;
+    }
+    &__phone {
+        &:after {
+            content: '|';
+            display: none;
+            margin: 0 20px;
+            @media (min-width: 576px) {
+                display: inline-block;
+            }
+        }
+    }
+    &__address {
+        max-width: 525px;
+        margin-top: 20px;
     }
 }
