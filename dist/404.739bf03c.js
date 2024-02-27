@@ -586,6 +586,7 @@ var _modules = require("swiper/modules");
 window.addEventListener("DOMContentLoaded", ()=>{
     // Анимация шапки
     (function setHeaderAnimations() {
+        if (!document.querySelector(".header")) return;
         const header = document.querySelector(".header");
         let headerHeight = header.getBoundingClientRect().height;
         let scroll = pageYOffset;
@@ -619,6 +620,7 @@ window.addEventListener("DOMContentLoaded", ()=>{
             burger.style.paddingTop = `${height}px`;
         });
     }(), function openBurger() {
+        if (!document.querySelector(".header")) return;
         const header = document.querySelector(".header");
         const triggers = [
             ...document.querySelectorAll("[data-menu]")
@@ -630,6 +632,7 @@ window.addEventListener("DOMContentLoaded", ()=>{
             });
         });
     }(), function openFeedback() {
+        if (!document.querySelector(".header")) return;
         const header = document.querySelector(".header");
         const triggers = [
             ...document.querySelectorAll("[data-feedback]")
@@ -8819,4 +8822,4 @@ function EffectCards(_ref) {
 
 },{"../shared/create-shadow.mjs":"bWkQq","../shared/effect-init.mjs":"88TTi","../shared/effect-target.mjs":"3jkAD","../shared/effect-virtual-transition-end.mjs":"dzFvU","../shared/utils.mjs":"9mU7V","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["gRY1p","ebWYT"], "ebWYT", "parcelRequire78ca")
 
-//# sourceMappingURL=blog.739bf03c.js.map
+//# sourceMappingURL=404.739bf03c.js.map

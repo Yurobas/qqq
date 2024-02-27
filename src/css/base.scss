@@ -567,3 +567,41 @@ label {
         height: 600px;
     }
 }
+
+// Кнопки соц сетей
+.socials {
+    display: flex;
+    align-items: stretch;
+    &__item {
+        width: 100%;
+        max-width: 345px;
+        height: 50px;
+        transition: $transition;
+        @media (min-width: 992px) {
+            max-width: 310px;
+        }
+        &.--tw {
+            background: url('/src/images/icon-tw.svg') 50% 50% / 20px 17px no-repeat $bgTw;
+        }
+        &.--vk {
+            background: url('/src/images/icon-vk.svg') 50% 50% / 21px 13px  no-repeat $bgVk;
+        }
+        &:hover {
+            background-color: $bgVioletLight;
+        }
+    }
+}
+
+// Тэги
+.tag {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    border-bottom: 1px dashed currentColor;
+    color: $textViolet;
+    &:before {
+        content: '#'
+    }
+}

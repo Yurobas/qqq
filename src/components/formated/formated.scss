@@ -1,0 +1,196 @@
+.formated {
+    & *:not(img, figure, figcaption, ol, ul) {
+        max-width: 822px;
+    }
+    & h2, h3, h4 {
+        margin: 60px 0 25px;
+        font-family: 'HeroNew', Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        @media (min-width: 768px) {
+            margin: 60px 0 30px;
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    & h2 {
+        margin-top: 65px;
+        font-size: 40px;
+        line-height: 1.25;
+        @media (min-width: 768px) {
+            margin-top: 80px;
+            font-size: 60px;
+            line-height: 1.166;
+        }
+        @media (min-width: 1200px) {
+            font-size: 70px;
+            line-height: 1.14;
+        }
+    }
+    & h3 {
+        padding-right: 12px;
+        font-size: 30px;
+        line-height: 1.33;
+        @media (min-width: 576px) {
+            padding-right: 0;
+        }
+        @media (min-width: 768px) {
+            font-size: 36px;
+            line-height: 1.277;
+        }
+        @media (min-width: 1200px) {
+            font-size: 40px;
+            line-height: 1.25;
+        }
+    }
+    & h4 {
+        font-size: 20px;
+        line-height: 1.5;
+        @media (min-width: 768px) {
+            font-size: 24px;
+            line-height: 1.416;
+        }
+        @media (min-width: 992px) {
+            font-size: 30px;
+            line-height: 1.33;
+        }
+    }
+    & figcaption, li, p, a {
+        font-weight: 300;
+    }
+    & p {
+        font-size: 18px;
+        line-height: 1.5;
+        @media (min-width: 768px) {
+            font-size: 20px;
+        }
+        & + p {
+            margin-top: 20px;
+            @media (min-width: 768px) {
+                margin-top: 30px;
+            }
+        }
+    }
+    & blockquote,
+    & figure {
+        margin: 43px 0 47px;
+    }
+    & blockquote {
+        font-size: 25px;
+        line-height: 1.4;
+        font-weight: 200;
+        @media (min-width: 768px) {
+            padding: 0 60px 0 45px;
+            font-size: 30px;
+            line-height: 1.5;
+        }
+        @media (min-width: 992px) {
+            padding: 0 60px 0 80px;
+            font-size: 35px;
+            line-height: 1.428;
+        }
+        @media (min-width: 1200px) {
+            padding: 0 60px 0 90px;
+        }
+    }
+    & figure {
+        width: 100%;
+        & p {
+            width: 100%;
+            max-width: unset;
+            height: 230px;
+            @media (min-width: 576px) {
+                height: 380px;
+            }
+            @media (min-width: 768px) {
+                height: 616px;
+            }
+        }
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    & figcaption {
+        padding: 38px 30px 30px;
+        font-size: 18px;
+        line-height: 1.5;
+        background-color: $bgWhite;
+        @media (min-width: 768px) {
+            padding: 30px 45px;
+            font-size: 20px;
+        }
+    }
+    & ul, ol {
+        margin-top: 45px;
+        @media (min-width: 768px) {
+            padding-left: 45px;
+        }
+        & + p {
+            margin-top: 45px;
+        }
+    }
+    & ol, ul {
+        & ol, ul {
+            margin-top: 22px;
+            margin-left: -15px;
+            @media (min-width: 768px) {
+                margin-top: 30px;
+                margin-left: 0;
+                padding-left: 28px;
+            }
+        }
+    }
+    & ol {
+        counter-reset: list;
+        & > li {
+            counter-increment: list;
+            position: relative;
+            margin-left: 28px;
+            @media (min-width: 768px) {
+                margin-left: 30px;
+            }
+            &:before {
+                content: counter(list) ". ";
+                position: absolute;
+                top: -1px;
+                left: -17px;
+                display: block;
+                @media (min-width: 768px) {
+                    left: -21px;
+                }
+            }
+        }
+    }
+    & ul {
+        & > li {
+            position: relative;
+            padding-left: 15px;
+            @media (min-width: 768px) {
+                padding-left: 20px;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 11px;
+                left: 0;
+                display: block;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: currentColor;
+            }
+        }
+    }
+    & li {
+        font-size: 18px;
+        line-height: 1.5;
+        @media (min-width: 768px) {
+            font-size: 20px;
+        }
+        & + li {
+            margin-top: 30px;
+        }
+    }
+}

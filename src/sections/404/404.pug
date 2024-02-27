@@ -1,4 +1,24 @@
 mixin Section404()
-    section.notFound 
-        .notFound__container
-            
+    section.notFound
+        .notFound__video 
+            <video class="video" autoplay="" loop="" muted="" poster="https://mainbit.ru/src/images/header-bg-default.jpg" preload="auto">
+                <source src="https://mainbit.ru/src/video/glavnaya.mp4">
+                | Элемент video не поддерживается вашим браузером.
+            </video>
+        .notFound__content
+            .notFound__logo 
+                a.logo(href="/")
+                    .logo__text MainBit
+            .notFound__info
+                .notFound__title Кажется, вы попали не туда
+                p.notFound__text
+                    | Такой страницы больше нет или никогда не было.
+                    | Зато мы точно знаем, где вы можете 
+                    a(href="/portfolio") посмотреть наши работы 
+                    | или 
+                    a(href="mailto:info@mainbit.ru") написать нам письмо.
+            .notFound__title
+                .notFound__title-bg 
+                    span 404
+                .notFound__title-text
+                    span 404

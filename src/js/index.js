@@ -4,6 +4,8 @@ import { Navigation, Pagination } from 'swiper/modules';
 window.addEventListener('DOMContentLoaded', () => {
     // Анимация шапки
     +function setHeaderAnimations() {
+        if (!document.querySelector('.header')) return
+
         const header = document.querySelector('.header')
         let headerHeight = header.getBoundingClientRect().height
         let scroll = pageYOffset
@@ -65,6 +67,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Бургер
     +function openBurger() {
+        if (!document.querySelector('.header')) return
+
         const header = document.querySelector('.header')
         const triggers = [...document.querySelectorAll('[data-menu]')]
         
@@ -80,6 +84,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Заявка
     +function openFeedback() {
+        if (!document.querySelector('.header')) return
+        
         const header = document.querySelector('.header')
         const triggers = [...document.querySelectorAll('[data-feedback]')]
 

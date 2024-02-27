@@ -8,7 +8,7 @@ mixin SectionBlogList(items)
                 ul.blogList__tags
                     each tag in item.tags
                         li.blogList__tag 
-                            a.blogList__tag-link(href="/article")= tag
+                            a.tag(href="/article")= tag
                 .blogList__footer 
                     .blogList__author.text.text--note= item.author 
                     date.blogList__date.text.text--note= item.date

@@ -1,0 +1,62 @@
+.notFound {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    &__video {
+        position: absolute;
+        inset: 0;
+    }
+    &__content {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        min-height: inherit;
+        padding: 75px;
+        color: $textWhite;
+    }
+    &__logo {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 99px;
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        background-color: $bgViolet;
+    }
+    &__info,
+    &__title {
+        width: 50%;
+    }
+    &__title {
+        position: relative;
+        &-bg,
+        &-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & span {
+                font-family: 'HeroNew', Helvetica, Arial, sans-serif;
+                font-size: 360px;
+                font-weight: 800;
+                line-height: 1;
+            }
+        }
+        &-text {
+            height: 100%;
+            color: #fff;
+            background: #000;
+            mix-blend-mode: multiply;
+        }
+        &-bg {
+            position: absolute;
+            inset: 0;
+            color: #000;
+            background-color: $bgViolet;
+            mix-blend-mode: lighten;
+            pointer-events: none;
+            z-index: 1;
+        }
+    }
+}

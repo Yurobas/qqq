@@ -37,3 +37,10 @@ mixin SectionHero(title, description, params)
                                     span.link__text Познакомиться ближе
                                     svg.link__icon(width="12" height="13" xmlns="http://www.w3.org/2000/svg")
                                         path(d="m1.227 6.15 3.915 3.675V.63h1.5v9.195l3.915-3.675h.975v1.065l-5.64 5.445-5.64-5.445V6.15h.975Z")
+                        if params.author 
+                            .hero__author 
+                                .hero__author-picture
+                                    img.hero__author-image(src="/src/images/author.jpg", alt="Аватар")
+                                .hero__author-info
+                                    .hero__author-name.text.text--note Сергей Анисимов
+                                    .hero__author-date.text.text--note 26 октября, 2017

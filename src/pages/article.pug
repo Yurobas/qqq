@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Критерии качества постоянных ссылок: траст сайта-донора</title>
+    <link rel="stylesheet" href="/src/css/style.scss">
+
+    include ../sections/sections
+    include ../components/mixins
+</head>
+<body>
+
+    .wrapper
+        include ../components/header/header
+
+        main.page.--article
+        
+            +SectionHero(
+                'Критерии качества постоянных ссылок: траст сайта-донора',
+                'Каждый способ получения постоянных бэклинков имеет свои нюансы. Но&nbsp;есть универсальные критерии, на&nbsp;которые нужно ориентироваться при принятии решения о&nbsp;размещении ссылки на&nbsp;той или иной веб-площадке. В&nbsp;этом материале разберем главный критерий&nbsp;&mdash; уровень траста сайта-донора.',
+                {
+                    breadcrumbs: [
+                        {
+                            name: 'Блог',
+                            href: '/blog'
+                        },{
+                            name: 'Критерии качества постоянных ссылок: траст сайта-донора',
+                            href: '/article'
+                        }
+                        
+                    ],
+                    author: true
+                }
+            )
+
+            +SectionBlogPage
+
+        include ../components/footer/footer
+    
+    <script type="module" src="/src/js/index.js"></script>
+
+</body>
+</html>

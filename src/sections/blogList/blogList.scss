@@ -35,17 +35,6 @@
         &:not(:last-of-type) {
             margin-right: 10px;
         }
-        &-link {
-            font-size: 15px;
-            font-weight: 500;
-            line-height: 1.33;
-            white-space: nowrap;
-            border-bottom: 1px dashed currentColor;
-            color: $textViolet;
-            &:before {
-                content: '#'
-            }
-        }
     }
     &__footer {
         display: flex;

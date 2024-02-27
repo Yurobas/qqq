@@ -1,0 +1,31 @@
+.blogPage {
+    padding: 60px 0;
+    @media (min-width: 768px) {
+        padding: 90px 0;
+    }
+    @media (min-width: 1200px) {
+        padding: 92px 0 150px;
+    }
+    & .tag {
+        margin-top: 10px;
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+    &__footer {
+        margin-top: 45px;
+        &-title {
+            margin-bottom: 10px;
+            font-size: 20px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            @media (min-width: 768px) {
+                font-size: 30px;
+                line-height: 1.33;
+            }
+        }
+    }
+    &__socials {
+        margin-top: 45px;
+    }
+}
