@@ -10,44 +10,142 @@
         position: relative;
         display: flex;
         align-items: stretch;
+        flex-direction: column-reverse;
         min-height: inherit;
-        padding: 75px;
+        padding: 60px 20px;
         color: $textWhite;
+        @media (min-width: 768px) {
+            padding: 75px 40px;
+        }
+        @media (min-width: 992px) {
+            flex-direction: row;
+            padding: 75px 30px;
+        }
+        @media (min-width: 1200px) {
+            padding: 75px 45px;
+        }
+        @media (min-width: 1920px) {
+            padding: 75px;
+        }
     }
     &__logo {
         position: absolute;
-        top: 90px;
-        left: 0;
+        top: calc(60px + 38px);
+        left: calc(20px + 30px);
         width: 99px;
+        z-index: 1;
+        @media (min-width: 768px) {
+            top: calc(60px + 50px);
+        }
+        @media (min-width: 768px) {
+            top: calc(75px + 68px);
+            left: calc(45px + 40px);
+        }
+        @media (min-width: 992px) {
+            top: calc(75px + 90px);
+            left: calc(45px + 30px);
+        }
+        @media (min-width: 1200px) {
+            left: calc(45px + 45px);
+        }
+        @media (min-width: 1920px) {
+            left: calc(75px + 45px);
+        }
     }
     &__info {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        padding: 0 30px;
+        color: $textGray;
         background-color: $bgViolet;
+        @media (min-width: 768px) {
+            padding: 0 45px;
+        }
+        @media (min-width: 992px) {
+            justify-content: center;
+        }
+        &-content {
+            max-width: 540px;
+            transform: translateY(30px);
+            @media (min-width: 576px) {
+                transform: none;
+            }
+            @media (min-width: 992px) {
+                max-width: 590px;
+            }
+        }
+    }
+    &__title {
+        margin-bottom: 10px;
+    }
+    &__text {
+        & a {
+            color: $textBlue;
+            &:hover {
+                color: $textLinkHover;
+            }
+        }
     }
     &__info,
-    &__title {
-        width: 50%;
+    &__code {
+        flex-grow: 1;
+        @media (min-width: 992px) {
+            width: 50%;
+        }
     }
-    &__title {
+    &__code {
         position: relative;
+        @media (max-width: 991px) {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+        }
         &-bg,
         &-text {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-end;
+            justify-content: flex-start;
+            @media (min-width: 992px) {
+                align-items: center;
+                justify-content: center;
+            }
             & span {
+                padding-left: 30px;
                 font-family: 'HeroNew', Helvetica, Arial, sans-serif;
-                font-size: 360px;
+                font-size: 120px;
                 font-weight: 800;
                 line-height: 1;
+                @media (min-width: 576px) {
+                    padding-bottom: 30px;
+                    font-size: 170px;
+                }
+                @media (min-width: 768px) {
+                    padding-left: 45px;
+                    padding-bottom: 45px;
+                    font-size: 190px;
+                }
+                @media (min-width: 992px) {
+                    padding-left: 0;
+                    padding-bottom: 0;
+                }
+                @media (min-width: 1200px) {
+                    font-size: 220px;
+                }
+                @media (min-width: 1920px) {
+                    padding-right: 90px;
+                    font-size: 360px;
+                }
             }
         }
         &-text {
-            height: 100%;
+            width: 100%;
             color: #fff;
             background: #000;
             mix-blend-mode: multiply;
+            @media (min-width: 992px) {
+                width: unset;
+                height: 100%;
+            }
         }
         &-bg {
             position: absolute;

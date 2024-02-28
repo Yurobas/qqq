@@ -10,15 +10,16 @@ mixin Section404()
                 a.logo(href="/")
                     .logo__text MainBit
             .notFound__info
-                .notFound__title Кажется, вы попали не туда
-                p.notFound__text
-                    | Такой страницы больше нет или никогда не было.
-                    | Зато мы точно знаем, где вы можете 
-                    a(href="/portfolio") посмотреть наши работы 
-                    | или 
-                    a(href="mailto:info@mainbit.ru") написать нам письмо.
-            .notFound__title
-                .notFound__title-bg 
+                .notFound__info-content
+                    h1.notFound__title.title.title--mini Кажется, вы попали не&nbsp;туда
+                    p.notFound__text.text.text--body
+                        | Такой страницы больше нет или никогда не&nbsp;было.
+                        | Зато&nbsp;мы&nbsp;точно знаем, где вы&nbsp;можете 
+                        a(href="/portfolio") посмотреть наши работы 
+                        | или 
+                        a(href="mailto:info@mainbit.ru") написать нам письмо.
+            .notFound__code
+                .notFound__code-bg 
                     span 404
-                .notFound__title-text
+                .notFound__code-text
                     span 404
