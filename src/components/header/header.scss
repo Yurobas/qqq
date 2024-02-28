@@ -68,19 +68,19 @@
     &__line {
         width: 100%;
         @media (min-width: 576px) {
-            width: calc(100% - 40px);
+            width: calc(100% - 20px * 2);
         }
         @media (min-width: 768px) {
-            width: calc(100% - 80px);
+            width: calc(100% - 40px * 2);
         }
         @media (min-width: 992px) {
-            width: 930px;
+            width: calc(100% - 30px * 2);
         }
         @media (min-width: 1200px) {
-            width: 1110px;
+            width: calc(100% - 45px * 2);
         }
         @media (min-width: 1920px) {
-            width: 1770px;
+            width: calc(100% - 75px * 2);
         }
     }
     &__bg {

@@ -49,17 +49,19 @@ $grid-gutter-width:           30px;
 }
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
-    padding: 0 15px !important;
+    //max-width: 960px;
+    padding: 0 30px !important;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    //max-width: 1140px;
+    padding: 0 45px !important;
   }
 }
 @media (min-width: 1920px) {
   .container {
-    max-width: 1800px;
+    max-width: 1920px;
+    padding: 0 75px !important;
   }
 }

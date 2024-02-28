@@ -1,16 +1,23 @@
 .blog {
     position: relative;
     margin-top: 60px;
-    padding-top: 0;
+    padding: 0;
     color: $textGray;
-    @media (max-width: 767px) {
-        padding-bottom: 0;
-    }
     @media (min-width: 992px) {
         margin-top: 55px;
     }
     @media (min-width: 1200px) {
         margin-top: 75px;
+    }
+    & .container {
+        position: relative;
+        padding-bottom: 60px !important;
+        @media (min-width: 768px) {
+            padding-bottom: 75px !important;
+        }
+        @media (min-width: 1920px) {
+            
+        }
     }
     & .section__title {
         @media (max-width: 767px) {
@@ -57,12 +64,12 @@
         position: relative;
         width: 100vw;
         min-width: 100vw;
-        margin-left: -20px;
         color: $textGray;
         @media (min-width: 576px) {
             min-width: unset;
         }
         @media (max-width: 767px) {
+            margin-left: -20px;
             padding: 60px 20px 75px;
         }
         @media (min-width: 768px) {

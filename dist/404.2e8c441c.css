@@ -18,20 +18,20 @@
 
 @media (width >= 992px) {
   .container {
-    max-width: 960px;
-    padding: 0 15px !important;
+    padding: 0 30px !important;
   }
 }
 
 @media (width >= 1200px) {
   .container {
-    max-width: 1140px;
+    padding: 0 45px !important;
   }
 }
 
 @media (width >= 1920px) {
   .container {
-    max-width: 1800px;
+    max-width: 1920px;
+    padding: 0 75px !important;
   }
 }
 
@@ -12453,19 +12453,19 @@ label {
 
 @media (width >= 992px) {
   .header__bg, .header__line {
-    width: 930px;
+    width: calc(100% - 60px);
   }
 }
 
 @media (width >= 1200px) {
   .header__bg, .header__line {
-    width: 1110px;
+    width: calc(100% - 90px);
   }
 }
 
 @media (width >= 1920px) {
   .header__bg, .header__line {
-    width: 1770px;
+    width: calc(100% - 150px);
   }
 }
 
@@ -13824,7 +13824,6 @@ label {
 }
 
 .portfolio__item {
-  background-color: #fff;
   height: 250px;
   margin-top: 45px;
 }
@@ -14839,14 +14838,8 @@ label {
 .blog {
   color: #f6f5f7;
   margin-top: 60px;
-  padding-top: 0;
+  padding: 0;
   position: relative;
-}
-
-@media (width <= 767px) {
-  .blog {
-    padding-bottom: 0;
-  }
 }
 
 @media (width >= 992px) {
@@ -14858,6 +14851,17 @@ label {
 @media (width >= 1200px) {
   .blog {
     margin-top: 75px;
+  }
+}
+
+.blog .container {
+  position: relative;
+  padding-bottom: 60px !important;
+}
+
+@media (width >= 768px) {
+  .blog .container {
+    padding-bottom: 75px !important;
   }
 }
 
@@ -14931,7 +14935,6 @@ label {
   color: #f6f5f7;
   width: 100vw;
   min-width: 100vw;
-  margin-left: -20px;
   position: relative;
 }
 
@@ -14943,6 +14946,7 @@ label {
 
 @media (width <= 767px) {
   .blog__item {
+    margin-left: -20px;
     padding: 60px 20px 75px;
   }
 }
