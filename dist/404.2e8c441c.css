@@ -11199,9 +11199,8 @@ label {
   position: relative;
 }
 
-.section__video.--tonning:after {
-  content: "";
-  opacity: .5;
+.section__tonning {
+  opacity: 0;
   pointer-events: none;
   z-index: 0;
   background-color: #000;

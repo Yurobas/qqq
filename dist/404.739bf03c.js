@@ -863,6 +863,26 @@ window.addEventListener("DOMContentLoaded", ()=>{
             if (screen <= 767) image.style.height = `${height}px`;
             else image.removeAttribute("style");
         }
+    }(), function sectionToning() {
+        if (!document.querySelector("#toning")) return;
+        const el = document.querySelector("#toning");
+        function tonning(scroll) {
+            const screenHeight = window.innerHeight;
+            const top = el.getBoundingClientRect().top;
+            // Высота секции минус 40%
+            const height = el.getBoundingClientRect().height * 0.4;
+            // Когда экран проскролен до начала секции и еще на 10% ее высоты вниз
+            let startPosition = (scroll + top - screenHeight) * 1.1;
+            let endPosition = startPosition + height;
+            let progress = (scroll - startPosition) / (endPosition - startPosition);
+            if (scroll < startPosition) el.style.opacity = `0`;
+            else if (scroll < endPosition && progress > 0 && progress < 1) el.style.opacity = `${progress / 2}`;
+            else if (scroll > endPosition) el.style.opacity = `0.5`;
+        }
+        window.addEventListener("scroll", ()=>{
+            let scroll = window.pageYOffset;
+            tonning(scroll);
+        });
     }();
 });
 

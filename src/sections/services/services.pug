@@ -1,6 +1,7 @@
 mixin SectionServices()
     section.section.services
-        .section__video.--tonning
+        .section__video
+            .section__tonning#toning
             video(autoplay="" loop="" muted="" poster="https://mainbit.ru/src/images/nashi-uslugi.jpg" preload="auto")
                 source(src="https://mainbit.ru/src/video/nashi-uslugi.mp4")
                 | Элемент video не поддерживается вашим браузером.

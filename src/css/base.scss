@@ -186,17 +186,14 @@ label {
         & ~ * {
             position: relative;
         }
-        &.--tonning {
-            &:after {
-                content: '';
-                position: absolute;
-                inset: 0;
-                opacity: .5;
-                background-color: #000;
-                pointer-events: none;
-                z-index: 0;
-            }
-        }
+    }
+    &__tonning {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        background-color: #000;
+        pointer-events: none;
+        z-index: 0;
     }
     &__header {
         position: relative;
