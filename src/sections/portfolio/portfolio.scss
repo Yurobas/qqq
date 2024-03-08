@@ -1,7 +1,14 @@
 .portfolio {
+    padding-bottom: 90px;
     color: $textGray;
+    @media (min-width: 1200px) {
+        padding-bottom: 180px;
+    }
     @media (max-width: 767px) {
         padding-top: 30px;
+    }
+    & + .section {
+        margin-top: 0;
     }
     &__head {
         position: relative;
@@ -43,7 +50,7 @@
         &:before {
             right: 0;
             transform: translateX(100%);
-            @media (min-width: 576px) {
+            @media (min-width: 768px) {
                 display: none;
             }
         }
@@ -96,7 +103,7 @@
         &:hover {
             box-shadow: $shadowLight;
             & .portfolio__image {
-                transform: scale3d(1.22, 1.22, 1.22);
+                transform: scale3d(1.1, 1.1, 1.1);
                 transition: $transitionLong;
             }
             & .arrow {
@@ -127,31 +134,38 @@
             display: block;
         }
     }
-    // &__info {
-    //     position: absolute;
-    //     top: calc(100% - 100px);
-    //     right: 100px;
-    //     max-width: 0;
-    //     max-width: 500px;
-    //     max-height: 100px;
-    //     transition: $transitionLong;
-    //     overflow: hidden;
-    //     z-index: 1;
-    //     &-inner {
-    //         padding: 25px 37px 40px;
-    //         color: $textGray;
-    //         border: 10px solid $bgGray;
-    //         background-color: $bgViolet;
-    //         transition: $transitionLong;
-    //     }
-    //     &-content {
-    //         opacity: 0;
-    //         will-change: opacity, transform;
-    //         transform: translate3d(40px, 0, 0);
-    //         transition: $transitionLong .3s;
-    //     }
-    //     &-title {
-    //         margin-bottom: 10px;
-    //     }
-    // }
+    &__info {
+        position: absolute;
+        top: calc(100% - 100px);
+        right: 100px;
+        max-width: 0;
+        max-width: 500px;
+        max-height: 100px;
+        transition: $transitionLong;
+        overflow: hidden;
+        z-index: 1;
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            inset: 0;
+            border: 10px solid $bgGray;
+            pointer-events: none;
+        }
+        &-inner {
+            padding: calc(25px + 10px) calc(37px + 10px) calc(40px + 10px);
+            color: $textGray;
+            background-color: $bgViolet;
+            transition: $transitionLong;
+        }
+        &-content {
+            opacity: 0;
+            will-change: opacity, transform;
+            transform: translate3d(40px, 0, 0);
+            transition: $transitionLong .3s;
+        }
+        &-title {
+            margin-bottom: 10px;
+        }
+    }
 }

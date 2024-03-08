@@ -198,45 +198,46 @@ window.addEventListener('DOMContentLoaded', () => {
     }()
 
     // Карточки портфолио
-    // +function portfolioCards() {
-    //     if (!document.querySelector('.portfolio__item')) return
-    //     const items = [...document.querySelectorAll('.portfolio__link')]
+    +function portfolioCards() {
+        if (!document.querySelector('.portfolio__item')) return
+        const items = [...document.querySelectorAll('.portfolio__link')]
 
-    //     items.forEach(item => {
-    //         if (!item.querySelector('.portfolio__info')) return
+        items.forEach(item => {
+            if (!item.querySelector('.portfolio__info')) return
 
-    //         const block = item.querySelector('.portfolio__info')
-    //         const inner = block.querySelector('.portfolio__info-inner')
-    //         const content = block.querySelector('.portfolio__info-content')
+            const block = item.querySelector('.portfolio__info')
+            const inner = block.querySelector('.portfolio__info-inner')
+            const content = block.querySelector('.portfolio__info-content')
 
-    //         inner.style.width = `${inner.getBoundingClientRect().width}px`
-    //         block.style.width = 0
+            inner.style.width = `${inner.getBoundingClientRect().width}px`
+            block.style.width = 0
             
-    //         item.addEventListener('mouseenter', () => {
-    //             showInfo(block, inner, content)
-    //         })
+            item.addEventListener('mouseenter', () => {
+                showInfo(block, inner, content)
+            })
 
-    //         item.addEventListener('mouseleave', () => {
-    //             hideInfo(block, content)
-    //         })
-    //     })
+            item.addEventListener('mouseleave', () => {
+                hideInfo(block, content)
+            })
+        })
 
-    //     function showInfo(block, inner, content) {
-    //         const width = inner.getBoundingClientRect().width
-    //         const height = inner.getBoundingClientRect().height
+        function showInfo(block, inner, content) {
+            if (window.innerWidth < 1200) return
+            const width = inner.getBoundingClientRect().width
+            const height = inner.getBoundingClientRect().height
 
-    //         content.style.opacity = 1
-    //         inner.style.width = `${width}px`
-    //         block.style.width = `${width}px`
-    //         block.style.maxHeight = `${height}px`
-    //     }
+            content.style.opacity = 1
+            inner.style.width = `${width}px`
+            block.style.width = `${width}px`
+            block.style.maxHeight = `${height}px`
+        }
 
-    //     function hideInfo(block, content) {
-    //         content.style.opacity = 0
-    //         block.style.maxHeight = 0
-    //         block.style.width = 0
-    //     }
-    // }()
+        function hideInfo(block, content) {
+            content.style.opacity = 0
+            block.style.maxHeight = 0
+            block.style.width = 0
+        }
+    }()
 
     // Слайдер клиентов (мобильный)
     +function sliderClients() {

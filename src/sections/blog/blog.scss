@@ -11,12 +11,8 @@
     }
     & .container {
         position: relative;
-        padding-bottom: 60px !important;
         @media (min-width: 768px) {
             padding-bottom: 75px !important;
-        }
-        @media (min-width: 1920px) {
-            
         }
     }
     & .section__title {
@@ -104,7 +100,7 @@
         }
         &:hover {
             & .blog__image {
-                transform: scale3d(1.22, 1.22, 1.22);
+                transform: scale3d(1.1, 1.1, 1.1);
             }
             & .blog__footer:before {
                 width: 35%;

@@ -89,7 +89,7 @@
         left: 50%;
         bottom: 0;
         background-color: $bgWhite;
-        transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-50.02%, 0, 0);
         transition: 
             width $transitionHeader, 
             background-color $transition;
@@ -109,7 +109,7 @@
             #feae06 80.1%,
             #ff1178 100%
         );
-        transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-50.02%, 0, 0);
         transition: $transitionHeader;
         z-index: 10;
     }

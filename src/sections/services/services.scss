@@ -18,32 +18,68 @@
         }
     }
     &__list {
-        margin-top: 20px;
+        margin-top: 30px;
         @media (min-width: 992px) {
-            margin-top: 0;
+            margin-top: 37px;
         }
     }
     &__item {
         position: relative;
-        display: flex;
-        flex-direction: column;
         height: 100%;
-        margin-top: 33px;
-        padding-right: 3% !important;
-        color: $textWhite;
         z-index: 1;
-        @media (min-width: 576px) {
-            flex-direction: row;
-            margin-top: 43px;
+        &-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 0;
+            padding-right: 3% !important;
+            color: $textWhite;
+            transition: $transitionHeader;
+            z-index: 2;
+            @media (min-width: 576px) {
+                flex-direction: row;
+            }
+            @media (min-width: 992px) {
+                padding: 37px 0;
+            }
+            @media (min-width: 1200px) {
+                padding-right: 8.5% !important;
+            }
+            &:hover {
+                color: $textWhite;
+                @media (min-width: 576px) {
+                    color: $textViolet;
+                    & .services__item-icon {
+                        fill: $textLinkViolet;
+                    }
+                    & ~ .services__item-bg {
+                        left: 40px;
+                        right: unset;
+                        width: calc(100% - 40px);
+                        opacity: 1;
+                        @media (min-width: 1200px) {
+                            left: 50px;
+                            width: calc(100% - 50px);
+                        }
+                        & .services__item-arrow {
+                            opacity: 1;
+                            transform: none;
+                        }
+                    }
+                }
+            }
         }
-        @media (min-width: 768px) {
-            margin-top: 40px;
-        }
-        @media (min-width: 992px) {
-            margin-top: 75px;
-        }
-        @media (min-width: 1200px) {
-            padding-right: 8.5% !important;
+        &-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 0;
+            opacity: .85;
+            background-color: $bgWhite;
+            transition: $transitionHeader;
+            box-shadow: $shadow;
+            z-index: 1;
         }
         &-picture {
             margin-bottom: 25px;
@@ -57,10 +93,8 @@
         }
         &-icon {
             width: 80px;
-            fill: none;
-            & path {
-                fill: $textWhite;
-            }
+            fill: $textWhite;
+            transition: $transitionHeader;
             @media (min-width: 1200px) {
                 width: 100px;
             }
@@ -81,6 +115,23 @@
             @media (min-width: 1200px) {
                 font-size: 30px;
                 line-height: 1.33;
+            }
+        }
+        &-arrow {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            transform: translate3d(-10px, 0, 0);
+            transition: $transition .4s;
+            & .arrow {
+                border: none;
+                &:after {
+                    background: none;
+                }
+                &__icon {
+                    fill: $textLinkViolet;
+                }
             }
         }
     }

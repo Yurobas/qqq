@@ -84,13 +84,12 @@
         }
         &-sign {
             position: absolute;
-            right: 0;
+            left: 185px;
             bottom: 0;
             width: 116px;
             transform: translateY(35%);
             @media (min-width: 576px) {
                 left: 0;
-                bottom: 0;
                 width: unset;
                 transform: translateY(20%);
             }

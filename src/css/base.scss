@@ -492,21 +492,41 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     width: 73px;
     height: 73px;
-    padding: 9px;
     border: 6px solid $bgGray;
-    background-color: $bgViolet;
-    transition: $transitionLong;
     cursor: pointer;
     @media (min-width: 992px) {
         width: 100px;
         height: 100px;
-        padding: 15px;
         border-width: 10px;
     }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        background-color: $bgViolet;
+        transition: $transitionLong;
+        z-index: 1;
+    }
     &:hover {
-        background-color: $bgVioletLight;
+        &:after {
+            background-color: $bgVioletLight;
+        }
+    }
+    &__icon {
+        position: relative;
+        max-width: 37px;
+        transition: $transitionHeader;
+        z-index: 2;
+        @media (min-width: 992px) {
+            max-width: 51px;
+        }
     }
 }
 

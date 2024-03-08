@@ -35,17 +35,10 @@
         @media (min-width: 768px) {
             margin-top: 27px;
         }
-        &:nth-of-type(2) {
-            @media (min-width: 768px) {
-                padding-left: 15px;
-            }
-            @media (min-width: 992px) {
-                padding-left: 10px;
-            }
-        }
         &:last-of-type {
             @media (min-width: 768px) {
                 padding-left: 15px;
+                text-align: right;
             }
             @media (min-width: 992px) {
                 padding-left: 20px;

@@ -719,6 +719,39 @@ window.addEventListener("DOMContentLoaded", ()=>{
         });
         const setFocus = (el)=>el.classList.add("--focus");
         const unsetFocus = (el)=>el.classList.remove("--focus");
+    }(), function portfolioCards() {
+        if (!document.querySelector(".portfolio__item")) return;
+        const items = [
+            ...document.querySelectorAll(".portfolio__link")
+        ];
+        items.forEach((item)=>{
+            if (!item.querySelector(".portfolio__info")) return;
+            const block = item.querySelector(".portfolio__info");
+            const inner = block.querySelector(".portfolio__info-inner");
+            const content = block.querySelector(".portfolio__info-content");
+            inner.style.width = `${inner.getBoundingClientRect().width}px`;
+            block.style.width = 0;
+            item.addEventListener("mouseenter", ()=>{
+                showInfo(block, inner, content);
+            });
+            item.addEventListener("mouseleave", ()=>{
+                hideInfo(block, content);
+            });
+        });
+        function showInfo(block, inner, content) {
+            if (window.innerWidth < 1200) return;
+            const width = inner.getBoundingClientRect().width;
+            const height = inner.getBoundingClientRect().height;
+            content.style.opacity = 1;
+            inner.style.width = `${width}px`;
+            block.style.width = `${width}px`;
+            block.style.maxHeight = `${height}px`;
+        }
+        function hideInfo(block, content) {
+            content.style.opacity = 0;
+            block.style.maxHeight = 0;
+            block.style.width = 0;
+        }
     }(), function sliderClients() {
         if (!document.querySelector(".reviews__list .swiper")) return;
         const view = 767;
