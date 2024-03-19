@@ -1,10 +1,11 @@
 .form {
     &.--success {
         & .form__container {
-            opacity: 0;
-            transform: translate3d(0, 30px, 1px);
+            // opacity: 0;
+            // transform: translate3d(0, 30px, 1px);
         }
         & .form__success {
+            position: static;
             opacity: 1;
             transform: none;
             pointer-events: unset;
@@ -85,6 +86,60 @@
     &__container {
         transition: $transitionHeader;
     }
+    &__element {
+        position: relative;
+        color: $textGray;
+        background-color: $bgViolet;
+        @media (min-width: 992px) and (max-width: 1199px) {
+            padding-right: 30px !important;
+        }
+        &:after,
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100vw;
+            background-color: $bgViolet;
+        }
+        &:after {
+            left: 0;
+            transform: translateX(-100%);
+        }
+        &:before {
+            right: 0;
+            transform: translateX(100%);
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+        &:last-child {
+            padding-bottom: 90px;
+        }
+    }
+    &__block {
+        padding-top: 30px;
+        &.col-xl-4 {
+            &:nth-child(odd) {
+                @media (min-width: 1200px) {
+                   padding-right: 15px !important;
+                }
+            }
+        }
+        &.col-xl-6 {
+            &:nth-child(2n + 2) {
+                @media (min-width: 1200px) {
+                   margin-right: 1px;
+                }
+                &:after {
+                    @media (min-width: 1200px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
     &__label {
         position: relative;
         & + & {
@@ -161,8 +216,6 @@
     }
     &__success {
         position: absolute;
-        top: 0;
-        left: 0;
         opacity: 0;
         will-change: opacity, transform;
         transform: translate3d(0, -30px, 1px);

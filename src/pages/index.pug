@@ -20,14 +20,17 @@
                 'Вовремя, Качественно, Доступно',
                 'Мы&nbsp;создаем сайты любой степени сложности: от&nbsp;компактных визиток до&nbsp;масштабных порталов, от&nbsp;промо&nbsp;-&nbsp;сайтов до&nbsp;интернет-магазинов. У&nbsp;нас нет проходных проектов.',
                 {
-                    triggers: true
+                    triggers: {
+                        button: 'Оставить заявку',
+                        scroll: 'Познакомиться ближе'
+                    }
                 }
             )
 
             +SectionInfo
             +SectionPortfolio
             +SectionServices
-            +SectionReviews
+            +SectionReviews(true)
             +SectionBlog
 
             +print

@@ -1,4 +1,4 @@
-mixin SectionReviews()
+mixin SectionReviews(brands)
     section.section.reviews 
         .container
             .row.no-gutters 
@@ -109,33 +109,34 @@ mixin SectionReviews()
                                 .reviews__author-name.title.title--note Ольга Широкова
                                 .reviews__author-post.text.text--note Директор по&nbsp;маркетингу LaMaree
                     .swiper-pagination
-            .reviews__brands
-                .reviews__subtitle.title.title--h3 Нам доверяют компании из&nbsp;разных сфер бизнеса
-                .reviews__list
-                    .swiper
-                        .swiper-wrapper
-                            .swiper-slide.reviews__brand
-                                img.reviews__brand-icon(width="129" src="https://mainbit.ru//upload/iblock/a4e/2e8m9xo88je8z3w7xzz9sevw5ucoucp9.svg", alt="Лого")
-                            .swiper-slide.reviews__brand
-                                img.reviews__brand-icon(width="105" src="https://mainbit.ru/upload/iblock/7e0/jbf4696gmyah2lncbgm1w5o14fs7c9qt.svg", alt="Лого")
-                            .swiper-slide.reviews__brand
-                                img.reviews__brand-icon(width="105" src="https://mainbit.ru/upload/iblock/913/93jd0j2pi31eabf4l1hf51b5ade43du2.svg", alt="Лого")
-                            .swiper-slide.reviews__brand
-                                img.reviews__brand-icon(width="104" src="https://mainbit.ru/upload/iblock/1d6/5elxrls820phyai8ksgprtnuqf8yaqx7.svg", alt="Лого")
-                            .swiper-slide.reviews__brand
-                                img.reviews__brand-icon(width="228" src="https://mainbit.ru/upload/iblock/36a/mkcix3bdfyff6sypqcok2pv4pqzbethz.svg", alt="Лого")
-                            .swiper-slide.reviews__brand
-                                img.reviews__brand-icon(width="156" src="https://mainbit.ru/upload/iblock/ba1/hlpaodlgmdzfjfvv4gd6evo3qlk5ogcp.svg", alt="Лого")
-                            .swiper-slide.reviews__brand
-                                img.reviews__brand-icon(width="156" src="https://mainbit.ru/upload/iblock/b74/nklbm4qrezdda0riqwvrrfijf3q4swx0.svg", alt="Лого")
-                            .swiper-slide.reviews__brand
-                                img.reviews__brand-icon(width="190" src="https://mainbit.ru/upload/iblock/32e/8iqq9igl89q0stjbajhq2ym8zzohoo7f.svg", alt="Лого")
-                            .swiper-slide.reviews__brand
-                                img.reviews__brand-icon(width="228" src="https://mainbit.ru/upload/iblock/36a/mkcix3bdfyff6sypqcok2pv4pqzbethz.svg", alt="Лого")
-                            .swiper-slide.reviews__brand
-                                img.reviews__brand-icon(width="156" src="https://mainbit.ru/upload/iblock/ba1/hlpaodlgmdzfjfvv4gd6evo3qlk5ogcp.svg", alt="Лого")
-                            .swiper-slide.reviews__brand
-                                img.reviews__brand-icon(width="156" src="https://mainbit.ru/upload/iblock/b74/nklbm4qrezdda0riqwvrrfijf3q4swx0.svg", alt="Лого")
-                            .swiper-slide.reviews__brand
-                                img.reviews__brand-icon(width="190" src="https://mainbit.ru/upload/iblock/32e/8iqq9igl89q0stjbajhq2ym8zzohoo7f.svg", alt="Лого")
-                        .swiper-pagination
+            if brands
+                .reviews__brands
+                    .reviews__subtitle.title.title--h3 Нам доверяют компании из&nbsp;разных сфер бизнеса
+                    .reviews__list
+                        .swiper
+                            .swiper-wrapper
+                                .swiper-slide.reviews__brand
+                                    img.reviews__brand-icon(width="129" src="https://mainbit.ru//upload/iblock/a4e/2e8m9xo88je8z3w7xzz9sevw5ucoucp9.svg", alt="Лого")
+                                .swiper-slide.reviews__brand
+                                    img.reviews__brand-icon(width="105" src="https://mainbit.ru/upload/iblock/7e0/jbf4696gmyah2lncbgm1w5o14fs7c9qt.svg", alt="Лого")
+                                .swiper-slide.reviews__brand
+                                    img.reviews__brand-icon(width="105" src="https://mainbit.ru/upload/iblock/913/93jd0j2pi31eabf4l1hf51b5ade43du2.svg", alt="Лого")
+                                .swiper-slide.reviews__brand
+                                    img.reviews__brand-icon(width="104" src="https://mainbit.ru/upload/iblock/1d6/5elxrls820phyai8ksgprtnuqf8yaqx7.svg", alt="Лого")
+                                .swiper-slide.reviews__brand
+                                    img.reviews__brand-icon(width="228" src="https://mainbit.ru/upload/iblock/36a/mkcix3bdfyff6sypqcok2pv4pqzbethz.svg", alt="Лого")
+                                .swiper-slide.reviews__brand
+                                    img.reviews__brand-icon(width="156" src="https://mainbit.ru/upload/iblock/ba1/hlpaodlgmdzfjfvv4gd6evo3qlk5ogcp.svg", alt="Лого")
+                                .swiper-slide.reviews__brand
+                                    img.reviews__brand-icon(width="156" src="https://mainbit.ru/upload/iblock/b74/nklbm4qrezdda0riqwvrrfijf3q4swx0.svg", alt="Лого")
+                                .swiper-slide.reviews__brand
+                                    img.reviews__brand-icon(width="190" src="https://mainbit.ru/upload/iblock/32e/8iqq9igl89q0stjbajhq2ym8zzohoo7f.svg", alt="Лого")
+                                .swiper-slide.reviews__brand
+                                    img.reviews__brand-icon(width="228" src="https://mainbit.ru/upload/iblock/36a/mkcix3bdfyff6sypqcok2pv4pqzbethz.svg", alt="Лого")
+                                .swiper-slide.reviews__brand
+                                    img.reviews__brand-icon(width="156" src="https://mainbit.ru/upload/iblock/ba1/hlpaodlgmdzfjfvv4gd6evo3qlk5ogcp.svg", alt="Лого")
+                                .swiper-slide.reviews__brand
+                                    img.reviews__brand-icon(width="156" src="https://mainbit.ru/upload/iblock/b74/nklbm4qrezdda0riqwvrrfijf3q4swx0.svg", alt="Лого")
+                                .swiper-slide.reviews__brand
+                                    img.reviews__brand-icon(width="190" src="https://mainbit.ru/upload/iblock/32e/8iqq9igl89q0stjbajhq2ym8zzohoo7f.svg", alt="Лого")
+                            .swiper-pagination

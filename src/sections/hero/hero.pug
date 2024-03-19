@@ -15,6 +15,12 @@ mixin SectionHero(title, description, params)
                                 a.hero__breadcrumbs-item.text.text--note(href="/") Главная
                                 each link in params.breadcrumbs
                                     a.hero__breadcrumbs-item.text.text--note(href=link.href)= link.name
+                if params.subtitle
+                    .hero__subtitle.col-sm-12
+                        .hero__subtitle-text.title.title--subtitle
+                            span!= params.subtitle
+                        .hero__subtitle-bg.title.title--subtitle
+                            span!= params.subtitle
                 .hero__title.col-sm-12
                     .hero__title-text.title
                         span!= title
@@ -31,12 +37,14 @@ mixin SectionHero(title, description, params)
                             .hero__address.text.text--body Москва, Старопетровский проезд, д. 7а, стр.&nbsp;6, оф.&nbsp;600. Ближайшая станция метро&nbsp;&mdash; &laquo;Войковская&raquo;.
                         if params.triggers
                             .hero__triggers
-                                .hero__button.button(data-feedback)
-                                    span Оставить заявку
-                                a.hero__scroll.link.link--dashed.link--uppercase.link--down(href="#info") 
-                                    span.link__text Познакомиться ближе
-                                    svg.link__icon(width="12" height="13" xmlns="http://www.w3.org/2000/svg")
-                                        path(d="m1.227 6.15 3.915 3.675V.63h1.5v9.195l3.915-3.675h.975v1.065l-5.64 5.445-5.64-5.445V6.15h.975Z")
+                                if params.triggers.button
+                                    .hero__button.button(data-feedback)
+                                        span= params.triggers.button
+                                if params.triggers.scroll
+                                    a.hero__scroll.link.link--dashed.link--uppercase.link--down(href="#info") 
+                                        span.link__text= params.triggers.scroll
+                                        svg.link__icon(width="12" height="13" xmlns="http://www.w3.org/2000/svg")
+                                            path(d="m1.227 6.15 3.915 3.675V.63h1.5v9.195l3.915-3.675h.975v1.065l-5.64 5.445-5.64-5.445V6.15h.975Z")
                         if params.author 
                             .hero__author 
                                 .hero__author-picture

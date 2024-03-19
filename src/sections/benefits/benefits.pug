@@ -1,0 +1,31 @@
+mixin SectionBenefits(data)
+    section.section.benefits 
+        .container
+            .row.no-gutters 
+                .benefits__head.col-xxl-9.col-lg-10
+                    .section__header
+                        .section__title.title.title--h2!= data.title
+                        p.section__text.text.text--lead!= data.description
+        if data.items 
+            .container
+                each list in data.items
+                    if data.offset
+                        .benefits__list.row.--offset
+                            each item in list 
+                                .benefits__item.col-xxl-5.col-lg-6.col-12
+                                    .benefits__content
+                                        .pattern
+                                        .benefits__info
+                                            .benefits__title.title.title--mini!= item.title 
+                                            p.benefits__text.text.text--body!= item.text
+                                            a.benefits__link.text.text--body(href="#0" data-feedback)!= item.link
+                    else
+                        .benefits__list.row
+                            each item in list 
+                                .benefits__item.col-xxl-5.col-lg-6.col-12
+                                    .benefits__content
+                                        .pattern
+                                        .benefits__info
+                                            .benefits__title.title.title--mini!= item.title 
+                                            p.benefits__text.text.text--body!= item.text
+                                            a.benefits__link.text.text--body(href="#0" data-feedback)!= item.link

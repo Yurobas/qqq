@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cайты под ваши задачи</title>
+    <link rel="stylesheet" href="/src/css/style.scss">
+
+    include ../sections/sections
+    include ../components/mixins
+</head>
+<body>
+
+    .wrapper
+        include ../components/header/header
+
+        main.page.--prodvizhenie
+        
+            +SectionHero(
+                'Превращаем SEO в&nbsp;стабильный канал привлечения клиентов',
+                'Продвигаем сайты только по&nbsp;важным запросам для бизнеса.<br> Чтобы к&nbsp;вам приходили люди, которым точно интересно ваше предложение.',
+                {
+                    breadcrumbs: [
+                        {
+                            name: 'Поисковое продвижение сайтов',
+                            href: '#0'
+                        }
+                    ],
+                    subtitle: 'ПоИСКОВОЕ ПРОДВИЖЕНИЕ САЙТОВ',
+                    triggers: {
+                        button: 'Оставить заявку',
+                        scroll: 'Заказать СЕО-аудит'
+                    }
+                }
+            )
+
+        include ../components/footer/footer
+    
+    <script type="module" src="/src/js/index.js"></script>
+
+</body>
+</html>

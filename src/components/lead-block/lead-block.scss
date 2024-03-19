@@ -1,0 +1,38 @@
+.lead-block {
+    padding: 45px 30px;
+    color: $textWhite;
+    background-color: $bgViolet;
+    @media (min-width: 768px) {
+        padding: 45px;
+    }
+    @media (min-width: 992px) {
+        padding: 75px 45px;
+    }
+    @media (min-width: 1200px) {
+        padding: 75px 60px;
+    }
+    &--light {
+        color: $textViolet;
+        background-color: $bgWhite;
+    }
+    &__content {
+        @media (min-width: 1920px) {
+            max-width: 545px;
+        }
+    }
+    &__title {
+        margin-bottom: 20px;
+        @media (min-width: 768px) {
+            margin-bottom: 30px;
+        }
+    }
+    &__button {
+        margin-top: 45px;
+        & .button {
+            display: inline-block;
+            @media (min-width: 576px) and (max-width: 767px) {
+                width: 100%;
+            }
+        }
+    }
+}

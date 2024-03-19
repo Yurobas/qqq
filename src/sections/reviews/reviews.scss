@@ -1,9 +1,9 @@
 .reviews {
-    @media (min-width: 768px) {
-        padding-top: 90px;
-    }
     @media (max-width: 767px) {
         padding-bottom: 0;
+    }
+    @media (min-width: 768px) {
+        padding-top: 90px;
     }
     & .section__title {
         @media (min-width: 768px) {
@@ -30,12 +30,21 @@
     }
     &__slider {
         margin-top: 60px;
+        padding-bottom: 115px;
         @media (min-width: 576px) {
+            padding-bottom: 60px;
+        }
+        @media (min-width: 768px) {
+            padding-bottom: 75px;
+        }
+        @media (min-width: 992px) {
             margin-top: 75px;
         }
     }
     &__slide {
         position: relative;
+        display: flex;
+        flex-direction: column;
         padding: 0;
         @media (min-width: 576px) {
             width: 82%;
@@ -57,6 +66,7 @@
         }
     }
     &__card {
+        flex-grow: 1;
         position: relative;
         background-color: $bgWhite;
         padding: 50px 20px;
@@ -72,7 +82,6 @@
         }
         @media (min-width: 1200px) {
             height: 495px;
-            padding: 68px 18px 68px 75px;
         }
         @media (min-width: 1920px) {
             height: 395px;
@@ -170,12 +179,11 @@
         }
     }
     &__brands {
-        margin-top: 61px;
         @media (min-width: 576px) {
-            margin-top: 58px;
+            margin-top: 60px;
         }
         @media (min-width: 768px) {
-            margin-top: 71px;
+            margin-top: 75px;
         }
     }
     &__brand {

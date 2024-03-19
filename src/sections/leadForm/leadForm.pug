@@ -1,0 +1,60 @@
+mixin SectionForm()
+    section.section.leadForm
+        .container
+            .leadForm__content
+                .pattern
+                .leadForm__header.row
+                    .leadForm__head.col-xxl-10.col-lg-10.col-md-11.col-xs-12.pr-xxl-2.pr-lg-1
+                        .section__header
+                            .section__title.title.title--h2 Оставьте заявку
+                            p.section__text.text.text--body Свяжемся не&nbsp;позднее следующего дня. Обсудим задачи, договоримся о&nbsp;встрече
+                .leadForm__form 
+                    form.form(action="#0")
+                        .form__inner
+                            .form__container.row
+                                .form__element.form__elementToHide.form__block.col-xl-4.col-lg-10.col-md-11.pr-lg-0.pr-md-1
+                                    .form__label.text.text--body
+                                        input.form__input(type="text" name="name")
+                                        span.form__placeholder Имя и фамилия
+                                        span.form__error Некорректное имя
+                                .form__element.form__elementToHide.form__block.col-xl-6.col-lg-10.col-md-11.pr-xl-2.pr-lg-0.pr-md-1
+                                    .form__label.text.text--body
+                                        input.form__input(type="text" name="phone")
+                                        span.form__placeholder Телефон или скайп
+                                        span.form__error Некорректный номер телефона
+                                .form__element.form__elementToHide.form__block.col-xl-4.col-lg-10.col-md-11.pr-lg-0.pr-md-1
+                                    .form__label.text.text--body
+                                        input.form__input(type="text" name="email")
+                                        span.form__placeholder Электронная почта
+                                .form__element.form__elementToHide.form__block.col-xl-6.col-lg-10.col-md-11.pr-xl-2.pr-lg-0.pr-md-1
+                                    .form__label.text.text--body
+                                        input.form__input(type="text" name="site")
+                                        span.form__placeholder Адрес сайта
+                                .form__element.form__elementToHide.form__block.col-xl-4.col-lg-10.col-md-11.pr-lg-0.pr-md-1
+                                    .form__label.text.text--body
+                                        input.form__input(type="text" name="goal")
+                                        span.form__placeholder Краткая постановка задачи
+                                .form__element.form__elementToHide.form__block.col-xl-6.col-lg-10.col-md-11.pr-xl-2.pr-lg-0.pr-md-1
+                                .form__element.form__elementToHide.col-xxl-10.col-lg-10.col-md-11.pr-lg-0.pr-md-1
+                                    .form__button
+                                        button.button.button--small.button--block(type="submit") Отправить заявку
+                                .form__success.col-xxl-10.col-lg-10.col-md-11.pr-lg-0.pr-md-1
+                                    .title.title--h3 Ваш запрос успешно отправлен!
+                                .form__element.col-xxl-10.col-lg-10.col-md-11.pr-lg-0.pr-md-1.pr-sm-2
+                                    .leadForm__steps
+                                        .leadForm__steps-name.title.title--item Дальше:
+                                        ul.leadForm__steps-list 
+                                            li.leadForm__steps-item 
+                                                span.leadForm__steps-name.text.text--body сбор информации
+                                                svg.leadForm__steps-arrow(width="12" height="11" viewBox="0 0 51 48" fill="#fff" xmlns="http://www.w3.org/2000/svg")
+                                                    path(fill-rule="evenodd" clip-rule="evenodd" d="M35.9865 28H0V20H36.303L23.9628 5.60306L30.0369 0.396729L50.3294 24.0714L28.966 47.6835L23.0337 42.3162L35.9865 28Z")
+                                            li.leadForm__steps-item 
+                                                span.leadForm__steps-name.text.text--body встреча
+                                                svg.leadForm__steps-arrow(width="12" height="11" viewBox="0 0 51 48" fill="#fff" xmlns="http://www.w3.org/2000/svg")
+                                                    path(fill-rule="evenodd" clip-rule="evenodd" d="M35.9865 28H0V20H36.303L23.9628 5.60306L30.0369 0.396729L50.3294 24.0714L28.966 47.6835L23.0337 42.3162L35.9865 28Z")
+                                            li.leadForm__steps-item 
+                                                span.leadForm__steps-name.text.text--body подготовка предложения
+                                                svg.leadForm__steps-arrow(width="12" height="11" viewBox="0 0 51 48" fill="#fff" xmlns="http://www.w3.org/2000/svg")
+                                                    path(fill-rule="evenodd" clip-rule="evenodd" d="M35.9865 28H0V20H36.303L23.9628 5.60306L30.0369 0.396729L50.3294 24.0714L28.966 47.6835L23.0337 42.3162L35.9865 28Z")
+                                            li.leadForm__steps-item 
+                                                span.leadForm__steps-name.text.text--body запуск проекта

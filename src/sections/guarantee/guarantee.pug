@@ -1,0 +1,23 @@
+mixin SectionGuarantee(data)
+    section.section.guarantee
+        .container 
+            .guarantee__row.row
+                .guarantee__info.col-xxl-8.col-xl-10.col-xs-12.ml-xxl-1
+                    .guarantee__info-box
+                        .pattern
+                        .pattern
+                        .guarantee__head
+                            .section__header
+                                .section__title.title.title--h2!= data.title
+                        ul.guarantee__items 
+                            each item in data.items 
+                                li.guarantee__item 
+                                    .guarantee__name.title.title--h3!= item.name 
+                                    p.guarantee__text.text.text--body!= item.text
+                .guarantee__lead.col-xxl-4.col-xl-5.col-md-10.col-xs-12.ml-xxl-n2.ml-xl-n3.ml-md-1
+                    .lead-block
+                        .lead-block__content
+                            .lead-block__title.title.title--mini!= data.lead.title
+                            p.lead-block__text.text.text--body!= data.lead.text
+                            .lead-block__button
+                                a.button.button--block(href="#0" data-feedback)!= data.lead.button

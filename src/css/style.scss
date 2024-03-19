@@ -12,7 +12,10 @@
 
 // Components
 @import '/src/components/nav/nav.scss';
+@import '/src/components/item/item.scss';
+@import '/src/components/pattern/pattern.scss';
 @import '/src/components/form/form.scss';
+@import '/src/components/lead-block/lead-block.scss';
 @import '/src/components/print/print.scss';
 @import '/src/components/asideBlock/asideBlock.scss';
 @import '/src/components/pagination/pagination.scss';
@@ -23,6 +26,12 @@
 // Sections
 @import '/src/sections/hero/hero.scss';
 @import '/src/sections/info/info.scss';
+@import '/src/sections/leadForm/leadForm.scss';
+@import '/src/sections/guarantee/guarantee.scss';
+@import '/src/sections/prices/prices.scss';
+@import '/src/sections/additional/additional.scss';
+@import '/src/sections/process/process.scss';
+@import '/src/sections/benefits/benefits.scss';
 @import '/src/sections/portfolio/portfolio.scss';
 @import '/src/sections/portfolioList/portfolioList.scss';
 @import '/src/sections/services/services.scss';

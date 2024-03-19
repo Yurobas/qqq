@@ -56,10 +56,10 @@ header.header
                     form.form
                         .form__inner
                             .form__container
-                                .form__head
+                                .form__elementToHide.form__head
                                     .form__title.title.title--h2 Предварительная заявка
                                     p.form__description.text.text--body Отправьте свои контакты, и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время
-                                .form__content
+                                .form__elementToHide.form__content
                                     .form__label.text.text--body
                                         input.form__input(type="text" name="name")
                                         span.form__placeholder Ваше имя
@@ -69,7 +69,7 @@ header.header
                                         span.form__placeholder Телефон
                                         span.form__error Некорректный номер телефона
                                     button.form__button.button.button--small(type="submit") Отправить
-                            .form__success 
-                                .form__title.title.title--h2 Заявка отправлена
-                                p.form__description.text.text--body Ваша заявка уже дошла до&nbsp;нас. В&nbsp;ближайшее время мы&nbsp;свяжемся с&nbsp;вами.
-                                button.form__button.button.button--small(data-feedback) Отлично!
+                                .form__success 
+                                    .form__title.title.title--h2 Заявка отправлена
+                                    p.form__description.text.text--body Ваша заявка уже дошла до&nbsp;нас. В&nbsp;ближайшее время мы&nbsp;свяжемся с&nbsp;вами.
+                                    button.form__button.button.button--small(data-feedback) Отлично!

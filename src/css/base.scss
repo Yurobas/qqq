@@ -255,18 +255,20 @@ label {
         }
     }
     &__title {
-        margin-bottom: 34px;
-        @media (min-width: 576px) {
-            margin-bottom: 33px;
-        }
-        @media (min-width: 768px) {
-            margin-bottom: 37px;
-        }
-        @media (min-width: 992px) {
-            margin-bottom: 35px;
-        }
-        @media (min-width: 1200px) {
-            margin-bottom: 34px;
+        & + .section__text {
+            margin-top: 34px;
+            @media (min-width: 576px) {
+                margin-top: 33px;
+            }
+            @media (min-width: 768px) {
+                margin-top: 37px;
+            }
+            @media (min-width: 992px) {
+                margin-top: 35px;
+            }
+            @media (min-width: 1200px) {
+                margin-top: 34px;
+            }
         }
     }
     &__text {
@@ -344,6 +346,15 @@ label {
     }
     @media (min-width: 1200px) {
         font-size: 120px;
+    }
+    // Subtitle
+    &--subtitle {
+        font-size: 14px;
+        line-height: 2.14;
+        @media (min-width: 768px) {
+            font-size: 17px;
+            line-height: 1.76;
+        }
     }
     // H2
     &--h2 {
@@ -464,6 +475,10 @@ label {
         color: $textGray;
         background-color: $bgVioletLight;
     }
+    &--gray {
+        color: $textViolet;
+        background-color: $bgGray;
+    }
     &--small {
         padding-left: 40px;
         padding-right: 40px;
@@ -472,8 +487,14 @@ label {
         line-height: 1.25;
         letter-spacing: 0.184em;
     }
+    &--block {
+        width: 306px;
+        max-width: 100%;
+        text-align: center;
+    }
     &--wide {
         width: 100%;
+        text-align: center;
     }
     &--mini {
         padding: 20px 20px 15px;

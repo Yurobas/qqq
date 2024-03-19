@@ -1,0 +1,31 @@
+.item {
+    height: 100%;
+    padding: 0 30px 60px;
+    background-color: $bgWhite;
+    box-shadow: $shadowCard;
+    @media (min-width: 992px) {
+        padding: 0 45px 60px;
+    }
+    @media (min-width: 1920px) {
+        padding: 0 55px 60px 45px;
+    }
+    &:before {
+        counter-increment: count;
+        content: "0" counter(count);
+        height: 150px;
+        font-family: 'HeroNew', Helvetica, Arial, sans-serif;
+        font-size: 90px;
+        font-weight: 800;
+        line-height: 1.77;
+        color: $textWhite;
+        text-shadow: 0 1px 0 #D2A6FF, 0 -1px 0 #D2A6FF, 1px 0 0 #D2A6FF, -1px 0 0 #D2A6FF, 1px 1px 0 #D2A6FF, 1px -1px 0 #D2A6FF, -1px 1px 0 #D2A6FF, -1px -1px 0 #D2A6FF, 0 -1px 0 #D2A6FF, 1px 0 0 #D2A6FF, -1px 0 0 #D2A6FF, 1px 1px 0 #D2A6FF, 1px -1px 0 #D2A6FF, -1px 1px 0 #D2A6FF, -1px -1px 0 #D2A6FF, 0 -1px 0 #D2A6FF, 1px 0 0 #D2A6FF, -1px 0 0 #D2A6FF, 1px 1px 0 #D2A6FF, 1px -1px 0 #D2A6FF, -1px 1px 0 #D2A6FF, -1px -1px 0 #D2A6FF;
+        @media (min-width: 992px) {
+            height: 194px;
+            font-size: 126px;
+            line-height: 1.53;
+        }
+    }
+    &__title {
+        margin-bottom: 20px;
+    }
+}

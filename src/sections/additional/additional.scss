@@ -1,0 +1,42 @@
+.additional {
+    padding-top: 30px;
+    @media (min-width: 768px) {
+        padding-top: 75px;
+    }
+    &:last-of-type {
+        padding-bottom: 60px;
+        @media (min-width: 768px) {
+            padding-bottom: 90px;
+        }
+        @media (min-width: 1200px) {
+            padding-bottom: 150px;
+        }
+    }
+    & .section__title {
+        max-width: 870px;
+    }
+    & .section__text {
+        max-width: 870px;
+    }
+    &__list {
+        margin-top: 15px;
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+        & .additional__item:nth-child(even) {
+            @media (min-width: 1920px) {
+                margin-right: 1px;
+            }
+        }
+    }
+    &__item {
+        margin-top: 45px;
+        @media (min-width: 768px) {
+            margin-top: 75px;
+        }
+    }
+    &__icon,
+    &__title {
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,16 @@
+mixin SectionProcess(data)
+    section.section.process 
+        .container
+            .row
+                .process__head.col-lg-10.col-md-11.col-12.pr-xxl-3.pr-xxl-3.pr-md-2
+                    .pattern
+                    .section__header
+                        .section__title.title.title--h2!= data.title
+                        p.section__text.text.text--lead!= data.description
+        .container
+            .process__list.row
+                each item in data.items 
+                    .process__item.col-xxl-4.col-md-6.col-12
+                        .item
+                            .item__title.title.title--item!= item.title
+                            p.item__text.text.text--body!= item.text                  

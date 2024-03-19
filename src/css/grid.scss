@@ -31,6 +31,31 @@ $container-max-widths: (
 $grid-columns:                12;
 $grid-gutter-width:           30px;
 
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (1 / $grid-columns * 100%),
+    2: (2 / $grid-columns * 100%),
+    3: (3 / $grid-columns * 100%),
+    4: (4 / $grid-columns * 100%),
+    5: (5 / $grid-columns * 100%),
+    6: (6 / $grid-columns * 100%),
+    7: (7 / $grid-columns * 100%),
+    8: (8 / $grid-columns * 100%),
+    9: (9 / $grid-columns * 100%),
+    10: (10 / $grid-columns * 100%)
+  ),
+  $spacers
+);
+
 // Container adaptive
 @media (min-width: 360px) {
   .container {

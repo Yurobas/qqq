@@ -2,6 +2,7 @@ import Swiper from 'swiper'
 import { Navigation, Pagination } from 'swiper/modules';
 
 window.addEventListener('DOMContentLoaded', () => {
+
     // Анимация шапки
     +function setHeaderAnimations() {
         if (!document.querySelector('.header')) return
@@ -92,9 +93,12 @@ window.addEventListener('DOMContentLoaded', () => {
         triggers.forEach(trigger => {
             trigger.addEventListener('click', event => {
                 event.preventDefault()
-                !header.classList.contains('--feedback') ?
-                    header.classList.add('--feedback') :
+                if (!header.classList.contains('--feedback')) {
+                    header.classList.add('--feedback')
+                    header.classList.remove('--hide')
+                } else {
                     header.classList.remove('--feedback')
+                }
             })
         })
 
@@ -130,31 +134,34 @@ window.addEventListener('DOMContentLoaded', () => {
                     const type = input.name
                     const label = input.closest('.form__label')
 
-                    if (type != 'email') {
+                    if (type === 'name' || type === 'phone') {
                         if (input.value.length < 1) {
                             check = false
                             label.classList.add('--error')
                         } else {
                             label.classList.remove('--error')
                         }
-                    } else {
-                        const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
-
-                        if (!emailRegex.test(input.value)) {
-                            check = false
-                            label.classList.add('--error')
-                        } else {
-                            label.classList.remove('--error')
-                        }
                     }
+                    // } else if (type === 'email') {
+                    //     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+
+                    //     if (!emailRegex.test(input.value)) {
+                    //         check = false
+                    //         label.classList.add('--error')
+                    //     } else {
+                    //         label.classList.remove('--error')
+                    //     }
+                    // }
                 })
 
-                if (!check) {
-
-                } else {
+                if (check) {
                     //form.submit()
                     form.classList.add('--success')
                     form.reset()
+
+                    const elements = [...form.querySelectorAll('.form__elementToHide')]
+
+                    elements.forEach(el => el.style.display = 'none')
                     inputs.forEach(input => input.classList.remove('--active', '--focus'))
                 }
             })
@@ -315,6 +322,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         slider.on('afterInit', (swiper) => {
             if (swiper.activeIndex === 0) swiper.setTranslate(0)
+            setHeightSlider(swiper.slides)
         })
 
         slider.on('reachBeginning', (swiper) => {
@@ -326,11 +334,22 @@ window.addEventListener('DOMContentLoaded', () => {
         })
 
         slider.init()
+
+        function setHeightSlider(slides) {
+            let result = 0
+
+            slides.forEach(slide => {
+                const height = Math.round(slide.getBoundingClientRect().height)
+                if (height > result) result = height
+            })
+
+            slider.el.style.height = `${result}px`
+        }
     }()
 
     // Отзыв
     +function modalReviews() {
-        if (!document.querySelector('#show-print') && !document.querySelector('[data-print]')) return
+        if (!document.querySelector('#show-print') || !document.querySelector('[data-print]')) return
 
         const modal = document.querySelector('#show-print')
         const image = modal.querySelector('.print__image')
@@ -352,8 +371,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         modal.addEventListener('click', event => {
             modal.classList.remove('--show')
-            // const target = event.target
-            // if (target !== image) modal.classList.remove('--show')
         })
     }()
 
@@ -392,8 +409,48 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     }()
 
+    // Ширина бэкграундов карточек блога на главной
+    +function setWidthBlogBackgrounds() {
+        if (!document.querySelector('.blog__item') && 
+            document.querySelectorAll('.blog__item').length !== 3) return
+
+        let screen = window.innerWidth
+        
+        const section = document.querySelector('.blog .container')
+        let sectionWidth = section.getBoundingClientRect().width
+
+        const items = [...section.querySelectorAll('.blog__item')]
+        let widthCenterItem = Math.ceil(items[1].getBoundingClientRect().width)
+        let widthItem = Math.ceil((sectionWidth - widthCenterItem) / 2)
+
+        setWidth()
+
+        window.addEventListener('resize', () => {
+            screen = window.innerWidth
+
+            sectionWidth = section.getBoundingClientRect().width
+            widthCenterItem = Math.ceil(items[1].getBoundingClientRect().width)
+            widthItem = Math.ceil((sectionWidth - widthCenterItem) / 2)
+
+            setWidth()
+        })
+
+        function setWidth() {
+            items.forEach((item, index) => {
+                const bg = item.querySelector('.blog__bg')
+
+                if (screen >= 768) {
+                    bg.style.width = `${widthItem}px`
+                    if (index == 1) bg.style.width = `${widthCenterItem}px`
+                } else {
+                    bg.style.width = '100%'
+                }
+            })
+        }
+    }()
+
     // Высота первой картинки в секции блога на мобильных
-    +function blogFirstImageHeight() {
+    +function blogFirstImageMobileHeight() {
         if (!document.querySelector('.blog')) return
 
         let screen = window.innerWidth
@@ -422,12 +479,12 @@ window.addEventListener('DOMContentLoaded', () => {
             if (screen <= 767) {
                 image.style.height = `${height}px`
             } else {
-                image.removeAttribute('style')
+                image.style.height = 'unset'
             }
         }
     }()
 
-    // Затемнение блока
+    // Затемнение блока услуг
     +function sectionToning() {
         if (!document.querySelector('#toning')) return
         const el = document.querySelector('#toning')
@@ -456,5 +513,64 @@ window.addEventListener('DOMContentLoaded', () => {
             let scroll = window.pageYOffset
             tonning(scroll)
         })
+    }()
+
+    // Анимация по скроллу
+    +function scrollAnimation() {
+        const screenHeight = window.innerHeight
+        const section = document.querySelector('.prices')
+        const values = [...section.querySelectorAll('.prices__value')]
+
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset
+            const top = section.getBoundingClientRect().top
+            const height = section.getBoundingClientRect().height
+
+            const params = {
+                pixelHeight: 500, // Когда проскролено n пикселей от верхней границы блока (500px)
+                screenHeight: 0.6, // Когда проскролено n % от высоты экрана после блока (40%)
+                blockHeight: height * 2.5 // Когда проскролено n от высоты анимируемого блока (2.5 раза больше высоты блока)
+            }
+
+            let positionPixel = scroll + top - (screenHeight - params.pixelHeight);
+            if (params.pixelHeight !== null && positionPixel < scroll) {
+                setValues()
+            }
+    
+            let positionBlock = scroll + top - (screenHeight - params.blockHeight);
+            if (params.blockHeight !== null && positionBlock < scroll) {
+                setValues()
+            }
+    
+            let positionScreen = scroll + top - (screenHeight * params.screenHeight);
+            if (params.screenHeight !== null && positionScreen < scroll) {
+                setValues()
+            }
+        })
+
+        function setValues() {
+            let start = 100
+
+            values.forEach((value, index) => {
+                let timeout = start * index
+                let move = value.dataset.move
+                let size = value.dataset.size
+
+                value.style.bottom = move + '%'
+
+                setTimeout(() => {
+                    value.style.opacity = '1';
+                    value.style.height = size + 'px';
+                }, timeout)
+            })
+        }
+
+        function resetValues() {
+            values.forEach(value => {
+              value.style.bottom = 0
+              value.style.height = 0
+              value.style.opacity = 0
+            })
+        }
     }()
 })

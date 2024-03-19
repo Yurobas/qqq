@@ -84,13 +84,15 @@
                                     form.form.form--subscribe
                                         .form__inner
                                             .form__container
-                                                .form__label.text.text--body
-                                                    input.form__input(name="email")
-                                                    span.form__placeholder E-mail
-                                                .form__button
-                                                    button.button.button--mini.button--wide(type="submit") Оформить подписку
-                                            .form__success 
-                                                .form__success-title СПАСИБО ЗА ПОДПИСКУ!
+                                                .form__elementToHide
+                                                    .form__label.text.text--body
+                                                        input.form__input(name="email")
+                                                        span.form__placeholder E-mail
+                                                .form__elementToHide
+                                                    .form__button
+                                                        button.button.button--mini.button--wide(type="submit") Оформить подписку
+                                                .form__success 
+                                                    .form__success-title СПАСИБО ЗА ПОДПИСКУ!
 
                             .asideBlock
                                 .asideBlock__title Популярные статьи
