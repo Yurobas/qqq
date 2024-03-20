@@ -347,6 +347,50 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }()
 
+    // Слайдер моделей сотрудничества
+    +function sliderCooperation() {
+        if (!document.querySelector('.cooperation__slider .swiper')) return
+
+        const block = document.querySelector('.cooperation__slider .swiper')
+        const slider = new Swiper(block, {
+            modules: [Pagination],
+            init: false,
+            spaceBetween: 30,
+            slidesPerView: 'auto',
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+            }
+        })
+
+        slider.on('afterInit', (swiper) => {
+            if (swiper.activeIndex === 0) swiper.setTranslate(0)
+            setHeightSlider(swiper.slides)
+        })
+
+        slider.on('reachBeginning', (swiper) => {
+            if (swiper.activeIndex === 0) swiper.setTranslate(0)
+        })
+        
+        slider.on('slideChange', (swiper) => {
+            if (swiper.activeIndex === 0) swiper.setTranslate(0)
+        })
+
+        slider.init()
+
+        function setHeightSlider(slides) {
+            let result = 0
+
+            slides.forEach(slide => {
+                const height = Math.round(slide.getBoundingClientRect().height)
+                if (height > result) result = height
+            })
+
+            slider.el.style.height = `${result}px`
+        }
+    }()
+
     // Отзыв
     +function modalReviews() {
         if (!document.querySelector('#show-print') || !document.querySelector('[data-print]')) return
@@ -517,6 +561,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Анимация по скроллу
     +function scrollAnimation() {
+        if (!document.querySelector('.prices')) return
+
         const screenHeight = window.innerHeight
         const section = document.querySelector('.prices')
         const values = [...section.querySelectorAll('.prices__value')]

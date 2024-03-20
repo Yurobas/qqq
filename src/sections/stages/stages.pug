@@ -1,0 +1,18 @@
+mixin SectionStages(data) 
+    section.section.stages
+        .container
+            .stages__head
+                .section__header
+                    .section__title.title.title--h2!= data.title
+                    p.section__text.text.text--lead!= data.description
+            .stages__blocks
+                .pattern
+                each block in data.blocks
+                    .stages__block
+                        .stages__title.title.title--h3!= block.title
+                        .stages__items.row
+                            each item in block.items
+                                .stages__item.col-xl-4.col-md-6.col-xs-12
+                                    .stages__box
+                                        .stages__name.title.title--item!= item.name
+                                        p.stages__text.text.text--body!= item.text

@@ -1,0 +1,78 @@
+.stages {
+    padding-bottom: 60px;
+    @media (min-width: 576px) {
+        padding-bottom: 145px;
+    }
+    @media (min-width: 768px) {
+        padding-bottom: 75px;
+    }
+    @media (min-width: 1200px) {
+        padding-bottom: 150px;
+    }
+    &__head {
+        @media (min-width: 1200px) {
+            max-width: 1350px;
+        }
+        & .section__text {
+            font-size: 24px;
+            line-height: 1.41;
+            @media (min-width: 992px) {
+                font-size: 30px;
+                line-height: 1.66;
+            }
+        }
+    }
+    &__blocks {
+        position: relative;
+        & .pattern {
+            display: none;
+            @media (min-width: 576px) {
+                display: block;
+                top: 119px;
+                left: 75%;
+                width: 1159px;
+                height: 2330px;
+            }
+            @media (min-width: 768px) {
+                top: 0;
+                height: 2205px;
+            }
+            @media (min-width: 992px) {
+                left: 58.33%;
+                height: 1885px;
+            }
+            @media (min-width: 1200px) {
+                height: 1365px;
+            }
+            @media (min-width: 1920px) {
+                left: 50%;
+            }
+        }
+    }
+    &__block {
+        position: relative;
+        margin-top: 60px;
+        z-index: 2;
+        @media (min-width: 768px) {
+            margin-top: 75px;
+        }
+    }
+    &__item {
+        margin-top: 45px;
+    }
+    &__box {
+        height: 100%;
+        padding: 45px 30px;
+        background-color: $bgWhite;
+        box-shadow: $shadowCard;
+        @media (min-width: 768px) {
+            padding: 60px 30px;
+        }
+        @media (min-width: 1200px) {
+            padding: 60px 45px;
+        }
+    }
+    &__name {
+        margin-bottom: 20px;
+    }
+}

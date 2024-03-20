@@ -1,0 +1,27 @@
+mixin SectionCooperation(data)
+    section.section.cooperation
+        .container
+            .cooperation__content
+                .pattern
+                .cooperation__bg.col-xxl-11.col-xl-10.col-md-11.col-xs-12
+                .cooperation__head 
+                    .section__header
+                        .section__title.title.title--h2!= data.title
+                        p.section__text.text.text--lead!= data.description
+                .cooperation__slider
+                    .swiper 
+                        .swiper-wrapper
+                            each item in data.items
+                                .cooperation__slide.swiper-slide
+                                    .cooperation__slide-content
+                                        .cooperation__slide-title.title.title--h3!= item.title 
+                                        p.cooperation__slide-text!= item.text 
+                                        .cooperation__slide-footer
+                                            ul.cooperation__slide-types
+                                                each type in item.items
+                                                    li.cooperation__slide-type 
+                                                        .cooperation__slide-type-name.title.title--item!= type.name
+                                                        .cooperation__slide-type-value.text.text--body!= type.value
+                                                        if type.text
+                                                            .cooperation__slide-type-text.text.text--note!= type.text
+                        .swiper-pagination
