@@ -1,5 +1,5 @@
 mixin SectionBenefits(data)
-    section.section.benefits 
+    section.section.benefits&attributes(attributes)
         .container
             .row.no-gutters 
                 .benefits__head.col-xxl-9.col-lg-10
@@ -18,7 +18,8 @@ mixin SectionBenefits(data)
                                         .benefits__info
                                             .benefits__title.title.title--mini!= item.title 
                                             p.benefits__text.text.text--body!= item.text
-                                            a.benefits__link.text.text--body(href="#0" data-feedback)!= item.link
+                                            if item.link
+                                                a.benefits__link.text.text--body(href="#0" data-feedback)!= item.link
                     else
                         .benefits__list.row
                             each item in list 
@@ -28,4 +29,5 @@ mixin SectionBenefits(data)
                                         .benefits__info
                                             .benefits__title.title.title--mini!= item.title 
                                             p.benefits__text.text.text--body!= item.text
-                                            a.benefits__link.text.text--body(href="#0" data-feedback)!= item.link
+                                            if item.link
+                                                a.benefits__link.text.text--body(href="#0" data-feedback)!= item.link

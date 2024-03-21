@@ -39,7 +39,7 @@
             border: 1px solid $borderViolet40;
         }
         & .form__placeholder {
-            top: calc(50% + 5px);
+            top: calc(50% + 2px);
             left: 10px;
             padding: 0 10px;
             color: $textNav;
@@ -115,22 +115,37 @@
             }
         }
         &:last-child {
-            padding-bottom: 90px;
+            padding-bottom: 60px;
+            @media (min-width: 768px) {
+                padding-bottom: 90px;
+            }
         }
     }
     &__block {
         padding-top: 30px;
         &.col-xl-4 {
             &:nth-child(odd) {
-                @media (min-width: 1200px) {
-                   padding-right: 15px !important;
+                & .form__label {
+                    @media (min-width: 1200px) {
+                        margin-right: 15px;
+                    }
                 }
+            }
+        }
+        &.col-xl-10 {
+            & .form__label {
+                margin-right: 15px;
             }
         }
         &.col-xl-6 {
             &:nth-child(2n + 2) {
+                & .form__label {
+                    @media (min-width: 1200px) {
+                        margin-left: 15px;
+                    }
+                }
                 @media (min-width: 1200px) {
-                   margin-right: 1px;
+                   padding-left: 0 !important;
                 }
                 &:after {
                     @media (min-width: 1200px) {

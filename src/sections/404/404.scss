@@ -30,13 +30,10 @@
     }
     &__logo {
         position: absolute;
-        top: calc(60px + 38px);
+        top: calc(60px + 55px);
         left: calc(20px + 30px);
         width: 99px;
         z-index: 1;
-        @media (min-width: 768px) {
-            top: calc(60px + 50px);
-        }
         @media (min-width: 768px) {
             top: calc(75px + 68px);
             left: calc(45px + 40px);

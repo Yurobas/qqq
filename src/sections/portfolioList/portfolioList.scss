@@ -40,7 +40,7 @@
         &:hover {
             box-shadow: $shadowLight;
             & .portfolioList__image {
-                transform: scale3d(1.22, 1.22, 1.22);
+                transform: scale3d(1.1, 1.1, 1.1);
                 transition: $transitionLong;
             }
             & .portfolioList__trigger {

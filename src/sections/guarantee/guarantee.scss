@@ -7,7 +7,7 @@
         padding: 150px 0;
     }
     @media (min-width: 1920px) {
-        padding: 120px 0;
+        padding: 150px 0 120px;
     }
     & .pattern {
         width: 401px;
@@ -49,7 +49,7 @@
             }
             @media (min-width: 1920px) {
                 right: -152px;
-                bottom: -125px;
+                bottom: -45px;
             }
         }
     }
@@ -87,6 +87,9 @@
         z-index: 2;
         @media (min-width: 768px) {
             margin-top: -120px;
+        }
+        @media (min-width: 1200px) {
+            margin-top: 0;
         }
         & .lead-block {
             @media (min-width: 992px) {

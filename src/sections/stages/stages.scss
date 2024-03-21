@@ -9,6 +9,10 @@
     @media (min-width: 1200px) {
         padding-bottom: 150px;
     }
+    @media (min-width: 1920px) {
+        margin-bottom: 25px;
+        padding-bottom: 125px;
+    }
     &__head {
         @media (min-width: 1200px) {
             max-width: 1350px;

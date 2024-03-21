@@ -16,6 +16,12 @@
         @media (min-width: 1920px) {
             max-width: 1100px;
         }
+        & + .section__text {
+            padding-top: 30px;
+            @media (min-width: 768px) {
+                padding-top: 45px;
+            }
+        }
     }
     & .section__text {
         max-width: 1200px;
@@ -23,10 +29,13 @@
     &__list {
         margin-top: 15px;
         @media (min-width: 576px) {
-            margin-top: 50px;
+            margin-top: 90px;
         }
         @media (min-width: 768px) {
             margin-top: 70px;
+        }
+        @media (min-width: 992px) {
+            margin-top: 75px;
         }
         & + & {
             @media (min-width: 576px) {
@@ -83,8 +92,11 @@
             & .pattern {
                 top: -35px;
                 left: -45px;
+                @media (min-width: 576px) {
+                    top: -74px;
+                }
                 @media (min-width: 768px) {
-                    top: -55px;
+                    top: -45px;
                     left: -60px;
                 }
                 @media (min-width: 992px) {
@@ -95,6 +107,7 @@
                     left: -34px;
                 }
                 @media (min-width: 1920px) {
+                    top: -60px;
                     left: -90px;
                 }
             }
@@ -154,6 +167,7 @@
                 }
                 @media (min-width: 1920px) {
                     right: -67px;
+                    bottom: -61px;
                 }
             }
         }
@@ -163,9 +177,6 @@
             height: 285px;
             @media (min-width: 576px) {
                 display: block;
-            }
-            @media (min-width: 768px) {
-                height: 325px;
             }
             @media (min-width: 992px) {
                 height: 365px;
@@ -184,10 +195,10 @@
         transition: $transitionLong;
         z-index: 2;
         @media (min-width: 768px) {
-            padding: 60px 30px;
+            padding: 60px 30px 75px;
         }
         @media (min-width: 1200px) {
-            padding: 60px;
+            padding: 60px 60px 75px;
         }
     }
     &__title,

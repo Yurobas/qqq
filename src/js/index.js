@@ -335,6 +335,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
         slider.init()
 
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                setHeightSlider(slider.slides)
+            }, 1000)
+        })
+
         function setHeightSlider(slides) {
             let result = 0
 
@@ -378,6 +384,12 @@ window.addEventListener('DOMContentLoaded', () => {
         })
 
         slider.init()
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                setHeightSlider(slider.slides)
+            }, 1000)
+        })
 
         function setHeightSlider(slides) {
             let result = 0

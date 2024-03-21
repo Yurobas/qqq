@@ -155,11 +155,8 @@
                 content: counter(list) ". ";
                 position: absolute;
                 top: -1px;
-                left: -17px;
+                left: -20px;
                 display: block;
-                @media (min-width: 768px) {
-                    left: -21px;
-                }
             }
         }
     }

@@ -9,6 +9,11 @@
     @media (min-width: 1200px) {
         padding-bottom: 300px;
     }
+    & .section__title {
+        & + .section__text {
+            padding-top: 20px;
+        }
+    }
     & .form {
         &.--success {
             & .form__success {
@@ -57,14 +62,19 @@
             }
         }
     }
+    & .form__button {
+        & .button {
+            padding-top: 30px;
+            padding-bottom: 25px;
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+        }
+    }
     &__content {
         position: relative;
         & .pattern {
             display: none;
-            right: -7px;
-            bottom: -153px;
-            width: 1161px;
-            height: 625px;
             z-index: 1;
             @media (min-width: 576px) {
                 display: block;
@@ -74,16 +84,21 @@
                 bottom: -93px;
             }
             @media (min-width: 768px) {
-                right: -430px;
+                right: -291px;
             }
             @media (min-width: 992px) {
                 width: 799px;
-                right: -459px;
+                right: -238px;
                 bottom: -133px;
             }
-            @media (min-width: 992px) {
-                right: -454px;
+            @media (min-width: 1200px) {
+                right: -174px;
                 bottom: -160px;
+            }
+            @media (min-width: 1920px) {
+                width: 1161px;
+                height: 625px;
+                right: 0;
             }
         }
     }
@@ -94,10 +109,14 @@
     }
     &__head {
         position: relative;
-        padding-top: 90px;
+        padding-top: 60px;
         color: $textGray;
         background-color: $bgViolet;
         z-index: 2;
+        @media (min-width: 768px) {
+            padding-top: 90px;
+            padding-bottom: 15px;
+        }
         &:after,
         &:before {
             content: '';

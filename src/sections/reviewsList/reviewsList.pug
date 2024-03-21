@@ -7,10 +7,8 @@ mixin SectionReviewsList(items)
                         .reviewsList__picture
                             a.reviewsList__link(href="#0" data-print= item.src)
                                 img.reviewsList__image(src= item.src, alt="Документ")
-                            .reviewsList__icon
-                                <svg class="reviewsList__svg" width="51" height="51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 23c0-8.284 6.716-15 15-15 8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15-8.284 0-15-6.716-15-15ZM23 0C10.297 0 0 10.297 0 23s10.297 23 23 23c4.907 0 9.455-1.536 13.189-4.155l8.983 8.983 5.657-5.656-8.983-8.983A22.894 22.894 0 0 0 46 23C46 10.297 35.703 0 23 0Z" fill="#fff"></path>
-                                </svg>
+                            .reviewsList__zoom
+                                img.reviewsList__icon(src="/src/images/icon-zoom.svg", alt="Лупа")
                         .reviewsList__card
                             .reviewsList__info
                                 p.reviewsList__text!= item.text
