@@ -50,7 +50,7 @@
                 @media (min-width: 576px) {
                     color: $textViolet;
                     & .services__item-icon {
-                        fill: $textLinkViolet;
+                        fill: $textLinkVioletDark;
                     }
                     & ~ .services__item-bg {
                         left: 40px;
@@ -130,7 +130,7 @@
                     background: none;
                 }
                 &__icon {
-                    fill: $textLinkViolet;
+                    fill: $textLinkVioletDark;
                 }
             }
         }

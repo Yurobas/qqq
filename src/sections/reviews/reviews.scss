@@ -1,29 +1,36 @@
-.reviews {
-    @media (max-width: 767px) {
-        padding-bottom: 0;
+.--sozdanie .reviews {
+    & .section__text {
+        @media (min-width: 992px) {
+            font-size: 30px;
+            line-height: 1.66;
+        }
     }
+}
+
+.guarantee + .reviews {
+    padding-top: 30px;
+    @media (min-width: 768px) {
+        padding-top: 75px;
+    }
+}
+
+.reviews {
     @media (min-width: 768px) {
         padding-top: 90px;
     }
     & .section__title {
-        @media (min-width: 768px) {
-            margin-bottom: 32px;
-        }
-        @media (min-width: 992px) {
-            margin-bottom: 51px;
-        }
-        @media (min-width: 1200px) {
-            margin-bottom: 51px;
-        }
-        @media (min-width: 1920px) {
-            margin-bottom: 47px;
+        & + .section__text {
+            padding-top: 30px;
+            @media (min-width: 992px) {
+                padding-top: 45px;
+            }
         }
     }
     & .swiper {
         overflow: visible;
         &-pagination {
             margin-top: 40px;
-            @media (min-width: 576px) {
+            @media (min-width: 768px) {
                 display: none;
             }
         }
@@ -69,10 +76,7 @@
         flex-grow: 1;
         position: relative;
         background-color: $bgWhite;
-        padding: 50px 20px;
-        @media (min-width: 576px) {
-            padding: 36px 20px;
-        }
+        padding: 45px 20px;
         @media (min-width: 768px) {
             padding: 52px 30px;
         }
@@ -91,11 +95,13 @@
     &__link {
         display: block;
         margin-top: 30px;
-        font-size: 20px;
-        line-height: 1.5;
-        letter-spacing: unset;
         @media (min-width: 576px) {
             margin-top: 43px;
+        }
+        & .link {
+            font-size: 20px;
+            line-height: 1;
+            letter-spacing: unset;
         }
     }
     &__signature {
@@ -179,9 +185,7 @@
         }
     }
     &__brands {
-        @media (min-width: 576px) {
-            margin-top: 60px;
-        }
+        margin-top: 30px;
         @media (min-width: 768px) {
             margin-top: 75px;
         }

@@ -1,3 +1,9 @@
+.section + .helpfull {
+    @media (max-width: 767px) {
+        padding-top: 30px;
+    }
+}
+
 .helpfull {
     &__row {
         align-items: center;

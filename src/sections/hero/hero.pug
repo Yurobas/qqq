@@ -41,10 +41,10 @@ mixin SectionHero(title, description, params)
                                     .hero__button.button(data-feedback)
                                         span= params.triggers.button
                                 if params.triggers.scroll
-                                    a.hero__scroll.link.link--dashed.link--uppercase.link--down(href="#info") 
-                                        span.link__text= params.triggers.scroll
-                                        svg.link__icon(width="12" height="13" xmlns="http://www.w3.org/2000/svg")
-                                            path(d="m1.227 6.15 3.915 3.675V.63h1.5v9.195l3.915-3.675h.975v1.065l-5.64 5.445-5.64-5.445V6.15h.975Z")
+                                    .hero__scroll
+                                        a.link.link--dashed.link--uppercase(href="#info") 
+                                            span.link__text= params.triggers.scroll
+                                            span.link__icon ↓
                         if params.author 
                             .hero__author 
                                 .hero__author-picture

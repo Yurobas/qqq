@@ -17,9 +17,9 @@ mixin SectionReviews(brands, text)
                                 | за хорошо проделанную работу приятно вдвойне. За годы работы 
                                 | мы получили немало положительных отзывов, и приложим все силы 
                                 | для того, чтобы и дальше в полной мере оправдывать ожидания заказчиков.
-                        a.section__link.link.link--dark.link--uppercase.link--right(href="/reviews") 
+                        a.section__link.link.link--dark.link--uppercase(href="/reviews") 
                             span.link__text Смотреть все отзывы
-                            <svg class="link__icon" width="12" height="13" xmlns="http://www.w3.org/2000/svg"><path d="m1.227 6.15 3.915 3.675V.63h1.5v9.195l3.915-3.675h.975v1.065l-5.64 5.445-5.64-5.445V6.15h.975Z"></path></svg>
+                            span.link__icon →
             .reviews__slider 
                 .swiper 
                     .swiper-wrapper 
@@ -30,9 +30,10 @@ mixin SectionReviews(brands, text)
                                     | а&nbsp;также разработку элементов фирменного стиля и&nbsp;другие 
                                     | проведенные работы. С&nbsp;MainBit мы&nbsp;работаем уже не&nbsp;первый 
                                     | год и&nbsp;надеемся на&nbsp;продолжение плодотворного.
-                                a.reviews__link.link.link--dark.link--dashed.text(href="#0" data-print="https://mainbit.ru/upload/iblock/4ed/bgp7yf1iw02hqnynva6zyx20s2tmq24p.jpg")
-                                    span.link__text Посмотреть отзыв
                                 <img src="https://mainbit.ru/upload/iblock/b13/0iez9kflcb8ya7o6lkupdzfeiy7oksbr.svg" alt="Подпись" class="reviews__signature">
+                                .reviews__link
+                                    a.link.link--dark.link--dashed.text(href="#0" data-print="https://mainbit.ru/upload/iblock/4ed/bgp7yf1iw02hqnynva6zyx20s2tmq24p.jpg")
+                                        span.link__text Посмотреть отзыв
                                 .reviews__arrow.reviews__prev
                                     .arrow 
                                         <svg class="arrow__icon" viewBox="0 0 51 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,8 +54,9 @@ mixin SectionReviews(brands, text)
                                     | и с интересом отнеслись к особенностям нашей работы. Они нашли 
                                     | выгодные решения для сайта с учетом имеющихся условий, а также 
                                     | пошли навстречу в финансовых вопросах.
-                                a.reviews__link.link.link--dark.link--dashed.text(href="#0" data-print="https://mainbit.ru/upload/iblock/69e/3rmchqrynpwxz0sdwxn00tw7a914hi8e.jpg")
-                                    span.link__text Посмотреть отзыв
+                                .reviews__link
+                                    a.link.link--dark.link--dashed.text(href="#0" data-print="https://mainbit.ru/upload/iblock/69e/3rmchqrynpwxz0sdwxn00tw7a914hi8e.jpg")
+                                        span.link__text Посмотреть отзыв
                                 <img src="https://mainbit.ru/upload/iblock/b13/0iez9kflcb8ya7o6lkupdzfeiy7oksbr.svg" alt="Подпись" class="reviews__signature">
                                 .reviews__arrow.reviews__prev
                                     .arrow 
@@ -76,8 +78,9 @@ mixin SectionReviews(brands, text)
                                     | а&nbsp;также разработку элементов фирменного стиля и&nbsp;другие 
                                     | проведенные работы. С&nbsp;MainBit мы&nbsp;работаем уже не&nbsp;первый 
                                     | год и&nbsp;надеемся на&nbsp;продолжение плодотворного сотрудничества.
-                                a.reviews__link.link.link--dark.link--dashed.text(href="#0" data-print="https://mainbit.ru/upload/iblock/756/o2we0xq1ynvc94binin7wfkjmpjhdy93.jpg")
-                                    span.link__text Посмотреть отзыв
+                                .reviews__link
+                                    a.link.link--dark.link--dashed.text(href="#0" data-print="https://mainbit.ru/upload/iblock/756/o2we0xq1ynvc94binin7wfkjmpjhdy93.jpg")
+                                        span.link__text Посмотреть отзыв
                                 <img src="https://mainbit.ru/upload/iblock/b13/0iez9kflcb8ya7o6lkupdzfeiy7oksbr.svg" alt="Подпись" class="reviews__signature">
                                 .reviews__arrow.reviews__prev
                                     .arrow 
@@ -99,8 +102,9 @@ mixin SectionReviews(brands, text)
                                     | а&nbsp;также разработку элементов фирменного стиля и&nbsp;другие 
                                     | проведенные работы. С&nbsp;MainBit мы&nbsp;работаем уже не&nbsp;первый 
                                     | год и&nbsp;надеемся на&nbsp;продолжение плодотворного сотрудничества.
-                                a.reviews__link.link.link--dark.link--dashed.text(href="#0" data-print="https://mainbit.ru/upload/iblock/fbc/c18z4m1hgymimbjyevoo1fpgrprnucjn.jpg")
-                                    span.link__text Посмотреть отзыв
+                                .reviews__link
+                                    a.link.link--dark.link--dashed.text(href="#0" data-print="https://mainbit.ru/upload/iblock/fbc/c18z4m1hgymimbjyevoo1fpgrprnucjn.jpg")
+                                        span.link__text Посмотреть отзыв
                                 <img src="https://mainbit.ru/upload/iblock/b13/0iez9kflcb8ya7o6lkupdzfeiy7oksbr.svg" alt="Подпись" class="reviews__signature">
                                 .reviews__arrow.reviews__prev
                                     .arrow 

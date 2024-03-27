@@ -23,7 +23,8 @@ window.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', event => {
             scroll = pageYOffset
 
-            if (!header.classList.contains('--feedback')) {
+            if (!header.classList.contains('--feedback') &&
+                !header.classList.contains('--menu')) {
                 if (scroll > 0) {
                     previousScroll < scroll ? 
                         header.classList.add('--hide') :
@@ -54,15 +55,17 @@ window.addEventListener('DOMContentLoaded', () => {
         const feedback = document.querySelector('.header__form')
         const burger = document.querySelector('.header__menu-nav')
 
-        const height = header.getBoundingClientRect().height.toFixed(2)
+        const height = header.getBoundingClientRect().height
+        
         feedback.style.paddingTop = `${height}px`
-        burger.style.paddingTop = `${height}px`
+        burger.style.paddingTop = `${height + 30}px`
 
         window.addEventListener('resize', () => {
-            const height = header.getBoundingClientRect().height.toFixed(2)
+            const height = header.getBoundingClientRect().height
+            
             offset.style.height = `${height}px`
             feedback.style.paddingTop = `${height}px`
-            burger.style.paddingTop = `${height}px`
+            burger.style.paddingTop = `${height + 30}px`
         })
     }()
 
@@ -359,10 +362,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const block = document.querySelector('.cooperation__slider .swiper')
         const slider = new Swiper(block, {
-            modules: [Pagination],
+            modules: [Navigation, Pagination],
             init: false,
             spaceBetween: 30,
             slidesPerView: 'auto',
+            navigation: {
+                prevEl: '.cooperation__prev',
+                nextEl: '.cooperation__next'
+            },
             pagination: {
                 el: '.swiper-pagination',
                 type: 'bullets',
@@ -476,7 +483,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let sectionWidth = section.getBoundingClientRect().width
 
         const items = [...section.querySelectorAll('.blog__item')]
-        let widthCenterItem = Math.ceil(items[1].getBoundingClientRect().width)
+        let widthCenterItem = Math.ceil(items[1].getBoundingClientRect().width + 1)
         let widthItem = Math.ceil((sectionWidth - widthCenterItem) / 2)
 
         setWidth()
@@ -485,7 +492,7 @@ window.addEventListener('DOMContentLoaded', () => {
             screen = window.innerWidth
 
             sectionWidth = section.getBoundingClientRect().width
-            widthCenterItem = Math.ceil(items[1].getBoundingClientRect().width)
+            widthCenterItem = Math.ceil(items[1].getBoundingClientRect().width + 1)
             widthItem = Math.ceil((sectionWidth - widthCenterItem) / 2)
 
             setWidth()

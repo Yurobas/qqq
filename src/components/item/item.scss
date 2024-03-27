@@ -12,6 +12,7 @@
     &:before {
         counter-increment: count;
         content: "0" counter(count);
+        display: block;
         height: 150px;
         font-family: 'HeroNew', Helvetica, Arial, sans-serif;
         font-size: 90px;

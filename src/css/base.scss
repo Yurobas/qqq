@@ -315,21 +315,20 @@ label {
         color: $textLinkVioletDark;
     }
     &--dashed {
-        & .link__text {
-            border-bottom: 1px dashed currentColor;
-        }
+        padding: 4px 0 5px;
+        line-height: 1;
+        border-bottom: 1px dashed currentColor;
     }
     &--uppercase {
         text-transform: uppercase;
     }
-    &--right {
-        & .link__icon {
-            transform: rotate(-90deg);
-        }
+    &__text,
+    &__icon {
+        display: inline-block;
     }
     &__icon {
-        margin-left: 10px;
         fill: currentColor;
+        margin-left: 10px;
         transform: translateY(-2px);
     }
 }
@@ -373,6 +372,7 @@ label {
     &--h3 {
         font-size: 30px;
         line-height: 1.33;
+        letter-spacing: 0.02em;
         @media (min-width: 768px) {
             font-size: 36px;
             line-height: 1.277;
@@ -380,6 +380,7 @@ label {
         @media (min-width: 992px) {
             font-size: 40px;
             line-height: 1.25;
+            letter-spacing: unset;
         }
     }
     // H4

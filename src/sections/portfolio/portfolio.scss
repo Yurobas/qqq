@@ -110,7 +110,9 @@
                 transition: $transitionLong;
             }
             & .arrow {
-                background-color: $bgVioletLight;
+                &:after {
+                    background-color: $bgVioletLight;
+                }
             }
             & .portfolio__info-content {
                 transform: none;
@@ -140,7 +142,7 @@
     &__info {
         position: absolute;
         top: calc(100% - 100px);
-        right: 100px;
+        right: 90px;
         max-width: 0;
         max-width: 500px;
         max-height: 100px;

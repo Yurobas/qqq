@@ -1,3 +1,9 @@
+.section + .stages {
+    @media (max-width: 767px) {
+        padding-top: 30px;
+    }
+}
+
 .stages {
     padding-bottom: 60px;
     @media (min-width: 576px) {
@@ -61,8 +67,16 @@
             margin-top: 75px;
         }
     }
+    &__items {
+        @media (max-width: 767px) {
+            margin-top: 15px;
+        }
+    }
     &__item {
-        margin-top: 45px;
+        margin-top: 30px;
+        @media (min-width: 768px) {
+            margin-top: 45px;
+        }
     }
     &__box {
         height: 100%;

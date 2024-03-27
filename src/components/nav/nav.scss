@@ -3,15 +3,24 @@
         & .nav__list {
             align-items: flex-start;
             flex-direction: column;
-            margin-top: -15px;
+            width: 100%;
+        }
+        & .nav__item {
+            width: 100%;
+            margin: 0 0 5px;
         }
         & .nav__link {
-            display: inline-block;
-            padding: 15px 0;
-            color: $textWhite;
-            font-size: 15px;
-            font-weight: 300;
-            line-height: 1;
+            display: block;
+            padding: 18px 15px 12px;
+            color: $textViolet;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.71;
+            letter-spacing: 0.25em;
+            background-color: $bgWhite;
+            &:hover {
+                color: $textLinkHover;
+            }
         }
     }
     &__list {

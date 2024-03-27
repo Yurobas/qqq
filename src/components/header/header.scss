@@ -15,18 +15,30 @@
         transform: translate3d(0, -100%, 0);
     }
     &.--menu {
-        & .header__logo  {
-            color: $textGray;
+        & .header__bg,
+        & .header__line {
+            width: 100vw;
         }
-        & .header__close-burger {
-            opacity: 1;
-            pointer-events: unset;
-            transition: $transition;
+        & .header__bg {
+            z-index: 7;
         }
         & .header__burger {
-            opacity: 0;
-            pointer-events: none;
-            transition: unset;
+            &-inner {
+                & span {
+                    &:first-of-type {
+                        top: 50%;
+                        transform: translate3d(-50%, -50%, 0) rotate(45deg);
+                    }
+                    &:last-of-type {
+                        top: 50%;
+                        transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+                    }
+                    &:nth-of-type(2) {
+                        opacity: 0;
+                        transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0) rotate(45deg);
+                    }
+                }
+            }
         }
         & .header__menu {
             transform: translate3d(0, 100%, 0);
@@ -253,6 +265,8 @@
             height: 2px;
             background-color: $bgVioletLight;
             transform: translate3d(-50%, 0, 0);
+            transition: $transitionHeader;
+            will-change: transform, opacity;
             &:first-of-type {
                 top: 2px;
             }
@@ -274,15 +288,62 @@
         bottom: 100%;
         width: 100%;
         min-height: 100vh;
-        color: $textGray;
-        background-color: $bgViolet;
+        color: $textViolet;
+        background-color: $bgGray;
         transition: $transitionHeader;
         z-index: 6;
+        & .container {
+            min-height: inherit;
+        }
         &-nav {
-            margin-top: 75px;
+            display: flex;
+            flex-direction: column;
+            min-height: inherit;
+            padding: 117px 0 30px;
             opacity: 0;
             will-change: opacity, transform;
             transform: translate3d(0, -30px, 1px);
+        }
+        &-info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: $bgWhite;
+        }
+        &-phone,
+        &-mail {
+            display: block;
+        }
+        &-phone {
+            color: $textViolet;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.55;
+        }
+        &-mail {
+            color: $textLinkVioletDark;
+        }
+        &-socials {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        &-social {
+            display: flex;
+            align-items: center;
+            color: $textLinkVioletDark;
+            &:not(:last-of-type) {
+                margin-right: 15px;
+            }
+            &-icon {
+                width: 20px;
+                margin-right: 5px;
+                fill: currentColor;
+                transform: translateY(-2px);
+            }
+        }
+        &-address {
+            margin-top: auto;
+            font-weight: 400;
         }
     }
     &__request {

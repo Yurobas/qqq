@@ -1,3 +1,12 @@
+.--sozdanie .additional {
+    & .section__text {
+        @media (min-width: 992px) {
+            font-size: 30px;
+            line-height: 1.66;
+        }
+    }
+}
+
 .additional {
     padding-top: 30px;
     @media (min-width: 768px) {
@@ -14,6 +23,12 @@
     }
     & .section__title {
         max-width: 930px;
+        & + .section__text {
+            padding-top: 30px;
+            @media (min-width: 768px) {
+                padding-top: 45px;
+            }
+        }
     }
     & .section__text {
         max-width: 1040px;
@@ -38,5 +53,13 @@
     &__icon,
     &__title {
         margin-bottom: 15px;
+    }
+    &__title {
+        font-size: 24px;
+        line-height: 1.416;
+        @media (min-width: 992px) {
+            font-size: 30px;
+            line-height: 1.33;
+        }
     }
 }

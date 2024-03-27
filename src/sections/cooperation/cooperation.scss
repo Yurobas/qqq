@@ -127,18 +127,19 @@
     }
     &__slide {
         @media (min-width: 576px) {
-            width: 83.33%;
+            width: calc(83.33% - 15px);
         }
         @media (min-width: 992px) {
-            width: 75%;
+            width: calc(75% - 15px);
         }
         @media (min-width: 1200px) {
-            width: 66.66%;
+            width: calc(66.66% - 15px);
         }
         @media (min-width: 1920px) {
-            width: 50%;
+            width: calc(50% - 15px);
         }
         &-content {
+            position: relative;
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -182,18 +183,14 @@
             }
         }
         &-type {
-            //flex: 1 1 calc(50% - 20px);
-            //max-width: 320px;
-            min-width: calc(50% - 20px);
+            flex: 1 1 calc(50% - 25px);
             margin-top: 20px;
             @media (min-width: 576px) {
-                //flex: 1 1 calc(50% - 33px);
-                min-width: calc(50% - 33px);
+                flex: 1 1 calc(50% - 33px);
                 margin-top: 30px;
             }
             @media (min-width: 992px) {
-                //flex: auto;
-                min-width: unset;
+                flex: auto;
                 &:not(:last-of-type):nth-of-type(2n + 2) {
                     margin-right: 20px;
                     padding-right: 20px;
@@ -205,8 +202,8 @@
                 }
             }
             &:nth-of-type(2n + 1) {
-                margin-right: 20px;
-                padding-right: 20px;
+                margin-right: 25px;
+                padding-right: 25px;
                 border-right: 1px solid $borderViolet;
                 @media (min-width: 576px) {
                     margin-right: 33px;
@@ -215,7 +212,39 @@
             }
             &-name {
                 margin-bottom: 10px;
+                @media (max-width: 575px) {
+                    font-size: 16px;
+                    line-height: 1.25;
+                }
             }
+        }
+    }
+    &__arrow {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transition: $transition;
+        z-index: 1;
+        @media (min-width: 1200px) {
+            display: block;
+        }
+        &.swiper-button-disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    &__prev {
+        left: 0;
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    &__next {
+        left: calc(66.66% - 15px);
+        right: unset;
+        transform: translate(-50%, -50%);
+        @media (min-width: 1920px) {
+            left: unset;
+            right: 0;
+            transform: translate(50%, -50%);
         }
     }
 }
