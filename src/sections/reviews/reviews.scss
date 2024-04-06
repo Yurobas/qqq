@@ -15,8 +15,8 @@
 }
 
 .reviews {
-    @media (min-width: 768px) {
-        padding-top: 90px;
+    @media (max-width: 767px) {
+        padding-bottom: 30px;
     }
     & .section__title {
         & + .section__text {
@@ -29,7 +29,7 @@
     & .swiper {
         overflow: visible;
         &-pagination {
-            margin-top: 40px;
+            margin-top: 45px;
             @media (min-width: 768px) {
                 display: none;
             }
@@ -37,7 +37,7 @@
     }
     &__slider {
         margin-top: 60px;
-        padding-bottom: 115px;
+        padding-bottom: 85px;
         @media (min-width: 576px) {
             padding-bottom: 60px;
         }
@@ -78,18 +78,17 @@
         background-color: $bgWhite;
         padding: 45px 20px;
         @media (min-width: 768px) {
-            padding: 52px 30px;
+            padding: 60px 30px;
         }
         @media (min-width: 992px) {
             height: 365px;
-            padding: 68px 75px;
+            padding: 60px 75px;
         }
         @media (min-width: 1200px) {
             height: 495px;
         }
         @media (min-width: 1920px) {
             height: 395px;
-            padding: 68px 75px;
         }
     }
     &__link {
@@ -157,7 +156,7 @@
             padding: 50px 0 0 44px;
         }
         @media (min-width: 992px) {
-            padding: 47px 0 0 60px;
+            padding: 45px 0 0 60px;
         }
         &:after {
             content: '';

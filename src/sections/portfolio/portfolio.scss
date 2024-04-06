@@ -1,8 +1,8 @@
 .portfolio {
     padding-bottom: 90px;
     color: $textGray;
-    @media (min-width: 1200px) {
-        padding-bottom: 180px;
+    @media (min-width: 768px) {
+        padding-bottom: 150px;
     }
     @media (max-width: 767px) {
         padding-top: 30px;
@@ -78,7 +78,6 @@
     &__item {
         height: 250px;
         margin-top: 45px;
-        //background-color: $bgWhite;
         @media (min-width: 576px) {
             height: 416px;
             margin-top: 45px;

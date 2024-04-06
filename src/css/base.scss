@@ -197,6 +197,13 @@ label {
     }
     &__header {
         position: relative;
+        &.--bg {
+            & .section__title {
+                & + .section__text {
+                    padding-top: 30px;
+                }
+            }
+        }
         &.--transparent {
             color: $textWhite;
             & .section__title {
@@ -205,18 +212,18 @@ label {
                 padding: 0;
                 &:first-of-type,
                 &:last-of-type {
-                    padding: 45px 30px 34px;
+                    padding: 45px 30px 0;
                     @media (min-width: 768px) {
-                        padding: 62px 30px 33px;
+                        padding: 62px 30px 0;
                     }
                     @media (min-width: 992px) {
-                        padding: 64px 45px 33px;
+                        padding: 64px 45px 0;
                     }
                     @media (min-width: 1200px) {
-                        padding: 64px 45px 33px;
+                        padding: 64px 45px 0;
                     }
                     @media (min-width: 1920px) {
-                        padding: 60px 45px 30px;
+                        padding: 60px 45px 0;
                     }
                 }
                 &:first-of-type {
@@ -256,18 +263,9 @@ label {
     }
     &__title {
         & + .section__text {
-            padding-top: 34px;
-            @media (min-width: 576px) {
-                padding-top: 33px;
-            }
-            @media (min-width: 768px) {
-                padding-top: 37px;
-            }
+            padding-top: 30px;
             @media (min-width: 992px) {
-                padding-top: 35px;
-            }
-            @media (min-width: 1200px) {
-                padding-top: 34px;
+                padding-top: 45px;
             }
         }
     }

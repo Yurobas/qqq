@@ -96,41 +96,21 @@
         }
     }
     &__list {
-        margin-top: 10px;
-        @media (min-width: 576px) {
-            margin-top: -13px;
-        }
+        margin-top: 15px;
         @media (min-width: 768px) {
-            margin-top: -9px;
+            margin-top: 15px;
         }
         @media (min-width: 992px) {
-            margin-top: -30px;
-        }
-        @media (min-width: 1200px) {
-            margin-top: 4px;
-        }
-        @media (min-width: 1920px) {
-            margin-top: -30px;
+            margin-top: 0;
         }
     }
     &__item {
         margin-top: 45px;
-        @media (min-width: 576px) {
-            margin-top: 43px;
-        }
         @media (min-width: 768px) {
-            margin-top: 55px;
+            margin-top: 60px;
         }
         @media (min-width: 992px) {
-            margin-top: 73px;
-            margin-right: 10px;
-        }
-        @media (min-width: 1200px) {
-            margin-top: 41px;
-            margin-right: 0;
-        }
-        @media (min-width: 1920px) {
-            margin-top: 73px;
+            margin-top: 75px;
             margin-right: 10px;
         }
         &-icon {

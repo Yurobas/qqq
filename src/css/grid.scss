@@ -62,11 +62,6 @@ $spacers: map-merge(
     padding: 0 20px !important;
   }
 }
-@media (min-width: 576px) {
-  .container {
-    max-width: unset;
-  }
-}
 @media (min-width: 768px) {
   .container {
     padding: 0 40px !important;
@@ -74,13 +69,11 @@ $spacers: map-merge(
 }
 @media (min-width: 992px) {
   .container {
-    //max-width: 960px;
     padding: 0 30px !important;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    //max-width: 1140px;
     padding: 0 45px !important;
   }
 }
