@@ -29,18 +29,27 @@
         }
     }
     &__logo {
-        position: absolute;
-        top: calc(60px + 55px);
-        left: calc(20px + 30px);
-        width: 99px;
-        z-index: 1;
+        order: 1;
+        width: 100%;
+        padding: 30px 30px 45px;
+        & > * {
+            width: 99px;
+        }
+        background-color: $bgViolet;
+        @media (min-width: 576px) {
+            padding: 40px 45px 45px;
+        }
         @media (min-width: 768px) {
-            top: calc(75px + 68px);
-            left: calc(45px + 40px);
+            padding: 60px 45px 45px;
         }
         @media (min-width: 992px) {
+            position: absolute;
+            width: unset;
             top: calc(75px + 90px);
             left: calc(45px + 30px);
+            padding: 0;
+            background-color: unset;
+            z-index: 1;
         }
         @media (min-width: 1200px) {
             left: calc(45px + 45px);
@@ -52,21 +61,18 @@
     &__info {
         display: flex;
         flex-direction: column;
-        padding: 0 30px;
+        padding: 0 30px 45px;
         color: $textGray;
         background-color: $bgViolet;
         @media (min-width: 768px) {
-            padding: 0 45px;
+            padding: 0 45px 45px;
         }
         @media (min-width: 992px) {
             justify-content: center;
+            padding-bottom: 0;
         }
         &-content {
             max-width: 540px;
-            transform: translateY(30px);
-            @media (min-width: 576px) {
-                transform: none;
-            }
             @media (min-width: 992px) {
                 max-width: 590px;
             }
@@ -108,6 +114,7 @@
             }
             & span {
                 padding-left: 30px;
+                padding-bottom: 30px;
                 font-family: 'HeroNew', Helvetica, Arial, sans-serif;
                 font-size: 120px;
                 font-weight: 800;

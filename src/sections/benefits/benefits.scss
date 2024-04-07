@@ -80,7 +80,7 @@
                         width: 401px;
                         height: 325px;
                         @media (max-width: 767px) {
-                            top: 57px;
+                            top: 30px;
                             bottom: unset;
                         }
                     }
@@ -190,12 +190,12 @@
         }
         &:last-child {
             & .pattern {
-                top: 2px;
+                top: 30px;
                 right: -60px;
                 @media (min-width: 768px) {
                     top: unset;
                     right: -50px;
-                    bottom: -55px;
+                    bottom: -60px;
                 }
                 @media (min-width: 992px) {
                     right: -50px;

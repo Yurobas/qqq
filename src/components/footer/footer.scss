@@ -1,16 +1,7 @@
 .footer {
-    padding: 33px 0;
+    padding: 45px 0 30px;
     color: $textGray;
     background-color: $bgViolet;
-    @media (min-width: 576px) {
-        padding: 42px 0 33px;
-    }
-    @media (min-width: 768px) {
-        padding: 45px 0 30px;
-    }
-    @media (min-width: 1200px) {
-        padding: 48px 0 30px;
-    }
     &__top {
         display: flex;
         align-items: stretch;

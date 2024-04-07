@@ -249,12 +249,9 @@
         & + .hero__title {
             & .hero__title-text,
             & .hero__title-bg {
-                padding-top: 30px;
-                @media (min-width: 576px) {
-                    padding-top: 25px;
-                }
+                padding-top: 40px;
                 @media (min-width: 768px) {
-                    padding-top: 35px;
+                    padding-top: 60px;
                 }
                 @media (min-width: 1200px) {
                     padding-top: 50px;
@@ -341,7 +338,7 @@
         &-bg {
             padding: 55px 20px 30px;
             @media (min-width: 576px) {
-                padding: 60px 30px 25px;
+                padding: 60px 30px 30px;
             }
             @media (min-width: 768px) {
                 padding: 80px 40px 35px;
@@ -469,6 +466,9 @@
             align-items: center;
             flex-direction: row;
         }
+        @media (max-width: 1199px) {
+            padding-top: 10px;
+        }
     }
     &__address,
     &__phone {
@@ -495,7 +495,7 @@
     &__author {
         display: flex;
         align-items: center;
-        margin-top: 54px;
+        margin-top: 60px;
         &-picture {
             width: 50px;
             height: 50px;

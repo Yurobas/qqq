@@ -3,22 +3,20 @@
         max-width: 822px;
     }
     & h2, h3, h4 {
-        margin: 60px 0 25px;
+        margin: 60px 0 20px;
         font-family: 'HeroNew', Helvetica, Arial, sans-serif;
         font-weight: 800;
         @media (min-width: 768px) {
-            margin: 60px 0 30px;
+            margin: 75px 0 30px;
         }
         &:first-child {
             margin-top: 0;
         }
     }
     & h2 {
-        margin-top: 65px;
         font-size: 40px;
         line-height: 1.25;
         @media (min-width: 768px) {
-            margin-top: 80px;
             font-size: 60px;
             line-height: 1.166;
         }
@@ -73,7 +71,7 @@
     }
     & blockquote,
     & figure {
-        margin: 43px 0 47px;
+        margin: 45px 0;
     }
     & blockquote {
         font-size: 25px;
@@ -113,7 +111,7 @@
         }
     }
     & figcaption {
-        padding: 38px 30px 30px;
+        padding: 30px;
         font-size: 18px;
         line-height: 1.5;
         background-color: $bgWhite;
@@ -133,7 +131,7 @@
     }
     & ol, ul {
         & ol, ul {
-            margin-top: 22px;
+            margin-top: 20px;
             margin-left: -15px;
             @media (min-width: 768px) {
                 margin-top: 30px;

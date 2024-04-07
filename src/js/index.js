@@ -341,11 +341,18 @@ window.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('load', () => {
             setTimeout(() => {
                 setHeightSlider(slider.slides)
-            }, 1000)
+            }, 500)
+        })
+
+        window.addEventListener('resize', () => {
+            setTimeout(() => {
+                setHeightSlider(slider.slides)
+            }, 500)
         })
 
         function setHeightSlider(slides) {
             let result = 0
+            slider.el.removeAttribute('style')
 
             slides.forEach(slide => {
                 const height = Math.round(slide.getBoundingClientRect().height)
@@ -395,11 +402,18 @@ window.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('load', () => {
             setTimeout(() => {
                 setHeightSlider(slider.slides)
-            }, 1000)
+            }, 500)
+        })
+
+        window.addEventListener('resize', () => {
+            setTimeout(() => {
+                setHeightSlider(slider.slides)
+            }, 500)
         })
 
         function setHeightSlider(slides) {
             let result = 0
+            slider.el.removeAttribute('style')
 
             slides.forEach(slide => {
                 const height = Math.round(slide.getBoundingClientRect().height)

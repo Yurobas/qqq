@@ -8,16 +8,6 @@
         max-width: 1020px;
         color: $textWhite;
     }
-    & .section__text {
-        @media (min-width: 576px) {
-            font-size: 24px;
-            line-height: 1.41;
-        }
-        @media (min-width: 992px) {
-            font-size: 30px;
-            line-height: 1.66;
-        }
-    }
     &__head {
         position: relative;
         padding-top: 58px;

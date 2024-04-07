@@ -1,9 +1,5 @@
 .form {
     &.--success {
-        & .form__container {
-            // opacity: 0;
-            // transform: translate3d(0, 30px, 1px);
-        }
         & .form__success {
             position: static;
             opacity: 1;
@@ -16,11 +12,11 @@
             &.--focus,
             &.--active {
                 & .form__placeholder {
-                    transform: translate3d(-12%, calc(-50% - 28px), 0) scale(.7);
+                    transform: translate3d(-12%, calc(-50% - 25px), 0) scale(.7);
                 }
                 &.--error {
                     & .form__placeholder {
-                        transform: translate3d(-12%, calc(-50% - 28px), 0) scale(.7);
+                        transform: translate3d(-12%, calc(-50% - 25px), 0) scale(.7);
                     }
                 }
             }
