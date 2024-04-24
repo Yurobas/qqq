@@ -92,7 +92,7 @@
             width: calc(100% - 45px * 2);
         }
         @media (min-width: 1920px) {
-            width: calc(100% - 75px * 2);
+            width: calc(1920px - 75px * 2);
         }
     }
     &__bg {
