@@ -497,8 +497,8 @@ window.addEventListener('DOMContentLoaded', () => {
         let sectionWidth = section.getBoundingClientRect().width
 
         const items = [...section.querySelectorAll('.blog__item')]
-        let widthCenterItem = Math.ceil(items[1].getBoundingClientRect().width + 1)
-        let widthItem = Math.ceil((sectionWidth - widthCenterItem) / 2)
+        let widthCenterItem = Math.ceil(items[1].getBoundingClientRect().width + 10)
+        let widthItem = Math.ceil((screen - widthCenterItem) / 2)
 
         setWidth()
 
@@ -506,8 +506,9 @@ window.addEventListener('DOMContentLoaded', () => {
             screen = window.innerWidth
 
             sectionWidth = section.getBoundingClientRect().width
+
             widthCenterItem = Math.ceil(items[1].getBoundingClientRect().width + 1)
-            widthItem = Math.ceil((sectionWidth - widthCenterItem) / 2)
+            widthItem = Math.ceil((screen - widthCenterItem) / 2)
 
             setWidth()
         })

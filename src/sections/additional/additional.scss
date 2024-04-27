@@ -1,3 +1,10 @@
+.reviews + .additional {
+    padding-top: 60px;
+    @media (min-width: 768px) {
+        padding-top: 75px;
+    }
+}
+
 .additional {
     padding-top: 30px;
     @media (min-width: 768px) {

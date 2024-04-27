@@ -116,7 +116,7 @@
             overflow: visible;
             &-pagination {
                 margin-top: 40px;
-                @media (min-width: 768px) {
+                @media (min-width: 992px) {
                     display: none;
                 }
                 &-bullet {
@@ -126,6 +126,7 @@
         }
     }
     &__slide {
+        position: relative;
         @media (min-width: 576px) {
             width: calc(83.33% - 15px);
         }
@@ -224,7 +225,7 @@
         position: absolute;
         top: 50%;
         transition: $transition;
-        z-index: 1;
+        z-index: 2;
         @media (min-width: 1200px) {
             display: block;
         }

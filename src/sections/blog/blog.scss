@@ -13,7 +13,6 @@
         margin-top: 75px;
     }
     & .container {
-        position: relative;
         @media (min-width: 768px) {
             padding-bottom: 75px !important;
         }
@@ -90,7 +89,7 @@
         }
         &:last-of-type {
             @media (min-width: 768px) {
-                padding-left: 5.7%;
+                padding-left: 2.85%;
             }
             & .blog__bg {
                 right: 0;
