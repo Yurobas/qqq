@@ -371,7 +371,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const slider = new Swiper(block, {
             modules: [Navigation, Pagination],
             init: false,
-            spaceBetween: 30,
+            spaceBetween: 75,
             slidesPerView: 'auto',
             navigation: {
                 prevEl: '.cooperation__prev',
@@ -381,6 +381,16 @@ window.addEventListener('DOMContentLoaded', () => {
                 el: '.swiper-pagination',
                 type: 'bullets',
                 clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    spaceBetween: 30,
+                    allowTouchMove: true,
+                },
+                992: {
+                    spaceBetween: 75,
+                    allowTouchMove: false,
+                }
             }
         })
 
