@@ -385,11 +385,13 @@ window.addEventListener('DOMContentLoaded', () => {
             breakpoints: {
                 0: {
                     spaceBetween: 30,
-                    allowTouchMove: true,
+                    allowTouchMove: true
                 },
                 992: {
-                    spaceBetween: 75,
-                    allowTouchMove: false,
+                    spaceBetween: 65
+                },
+                1200: {
+                    allowTouchMove: false
                 }
             }
         })
